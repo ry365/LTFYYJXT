@@ -109,6 +109,7 @@ namespace LTFYYJXT
             selectLst = new List<CheckBox>();
             CheckBoxList = new List<CheckBox>();
 
+ //           var con = string.Format("Data Source={0};User ID={1};Password={2}", "HIS", "zlhis", "HIS");
             var con = string.Format("Data Source={0};User ID={1};Password={2}", "ORA155", "us", "US");
             oraconn = new OracleConnection(con);
             oraconn.Open();
@@ -119,7 +120,9 @@ namespace LTFYYJXT
             dt = new DataTable("产妇妊娠风险筛查");
             oraDA.Fill(dt);
             InitSelectText();
-
+            
+//            p1.BringToFront();
+            radioButton1.Checked = true;
 
             edtpgsj.DateTime = DateTime.Now;
             edtbgrq.DateTime = DateTime.Now;
