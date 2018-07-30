@@ -46,37 +46,6 @@
             this.button3 = new System.Windows.Forms.Button();
             this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.label6 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel6 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel7 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel8 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel9 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel10 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel11 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel12 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel13 = new System.Windows.Forms.FlowLayoutPanel();
-            this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
-            this.accordionControlElement1 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement5 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement3 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement4 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement6 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement2 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement7 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement8 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement9 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement10 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement11 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement12 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement13 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement14 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement15 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.flowLayoutPanel14 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.edtName = new DevExpress.XtraEditors.TextEdit();
             this.label7 = new System.Windows.Forms.Label();
             this.edtmzh = new DevExpress.XtraEditors.TextEdit();
@@ -93,6 +62,36 @@
             this.label15 = new System.Windows.Forms.Label();
             this.edtyz = new DevExpress.XtraEditors.TextEdit();
             this.edtage = new DevExpress.XtraEditors.TextEdit();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.p1 = new System.Windows.Forms.Panel();
+            this.p2 = new System.Windows.Forms.Panel();
+            this.p3 = new System.Windows.Forms.Panel();
+            this.p4 = new System.Windows.Forms.Panel();
+            this.p5 = new System.Windows.Forms.Panel();
+            this.p6 = new System.Windows.Forms.Panel();
+            this.p7 = new System.Windows.Forms.Panel();
+            this.p8 = new System.Windows.Forms.Panel();
+            this.p9 = new System.Windows.Forms.Panel();
+            this.p10 = new System.Windows.Forms.Panel();
+            this.p11 = new System.Windows.Forms.Panel();
+            this.p12 = new System.Windows.Forms.Panel();
+            this.p13 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.radioButton14 = new System.Windows.Forms.RadioButton();
+            this.radioButton13 = new System.Windows.Forms.RadioButton();
+            this.radioButton12 = new System.Windows.Forms.RadioButton();
+            this.radioButton11 = new System.Windows.Forms.RadioButton();
+            this.radioButton10 = new System.Windows.Forms.RadioButton();
+            this.radioButton9 = new System.Windows.Forms.RadioButton();
+            this.radioButton8 = new System.Windows.Forms.RadioButton();
+            this.radioButton7 = new System.Windows.Forms.RadioButton();
+            this.radioButton6 = new System.Windows.Forms.RadioButton();
+            this.radioButton5 = new System.Windows.Forms.RadioButton();
+            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.p14 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.edtcbzd.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.edtpgsj.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.edtpgsj.Properties)).BeginInit();
@@ -101,8 +100,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.edtbgr.Properties)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.edtName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.edtmzh.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.edtsfzh.Properties)).BeginInit();
@@ -112,6 +109,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.edtbgjg.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.edtyz.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.edtage.Properties)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // edtcbzd
@@ -180,6 +179,7 @@
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(673, 423);
             this.label8.TabIndex = 4;
+            this.label8.DoubleClick += new System.EventHandler(this.label8_DoubleClick);
             // 
             // button2
             // 
@@ -311,339 +311,6 @@
             this.label6.Size = new System.Drawing.Size(72, 16);
             this.label6.TabIndex = 17;
             this.label6.Text = "门诊号：";
-            // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(686, 798);
-            this.flowLayoutPanel2.TabIndex = 10;
-            // 
-            // flowLayoutPanel3
-            // 
-            this.flowLayoutPanel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel3.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(686, 798);
-            this.flowLayoutPanel3.TabIndex = 11;
-            // 
-            // flowLayoutPanel4
-            // 
-            this.flowLayoutPanel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flowLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel4.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel4.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(686, 798);
-            this.flowLayoutPanel4.TabIndex = 12;
-            // 
-            // flowLayoutPanel5
-            // 
-            this.flowLayoutPanel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flowLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel5.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel5.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel5.Name = "flowLayoutPanel5";
-            this.flowLayoutPanel5.Size = new System.Drawing.Size(686, 798);
-            this.flowLayoutPanel5.TabIndex = 13;
-            // 
-            // flowLayoutPanel6
-            // 
-            this.flowLayoutPanel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flowLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel6.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel6.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel6.Name = "flowLayoutPanel6";
-            this.flowLayoutPanel6.Size = new System.Drawing.Size(686, 798);
-            this.flowLayoutPanel6.TabIndex = 14;
-            // 
-            // flowLayoutPanel7
-            // 
-            this.flowLayoutPanel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flowLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel7.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel7.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel7.Name = "flowLayoutPanel7";
-            this.flowLayoutPanel7.Size = new System.Drawing.Size(686, 798);
-            this.flowLayoutPanel7.TabIndex = 15;
-            // 
-            // flowLayoutPanel8
-            // 
-            this.flowLayoutPanel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flowLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel8.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel8.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel8.Name = "flowLayoutPanel8";
-            this.flowLayoutPanel8.Size = new System.Drawing.Size(686, 798);
-            this.flowLayoutPanel8.TabIndex = 16;
-            // 
-            // flowLayoutPanel9
-            // 
-            this.flowLayoutPanel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flowLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel9.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel9.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel9.Name = "flowLayoutPanel9";
-            this.flowLayoutPanel9.Size = new System.Drawing.Size(686, 798);
-            this.flowLayoutPanel9.TabIndex = 17;
-            // 
-            // flowLayoutPanel10
-            // 
-            this.flowLayoutPanel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flowLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel10.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel10.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel10.Name = "flowLayoutPanel10";
-            this.flowLayoutPanel10.Size = new System.Drawing.Size(686, 798);
-            this.flowLayoutPanel10.TabIndex = 18;
-            // 
-            // flowLayoutPanel11
-            // 
-            this.flowLayoutPanel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flowLayoutPanel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel11.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel11.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel11.Name = "flowLayoutPanel11";
-            this.flowLayoutPanel11.Size = new System.Drawing.Size(686, 798);
-            this.flowLayoutPanel11.TabIndex = 19;
-            // 
-            // flowLayoutPanel12
-            // 
-            this.flowLayoutPanel12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flowLayoutPanel12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel12.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel12.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel12.Name = "flowLayoutPanel12";
-            this.flowLayoutPanel12.Size = new System.Drawing.Size(686, 798);
-            this.flowLayoutPanel12.TabIndex = 20;
-            // 
-            // flowLayoutPanel13
-            // 
-            this.flowLayoutPanel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flowLayoutPanel13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel13.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel13.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel13.Name = "flowLayoutPanel13";
-            this.flowLayoutPanel13.Size = new System.Drawing.Size(686, 798);
-            this.flowLayoutPanel13.TabIndex = 21;
-            // 
-            // accordionControl1
-            // 
-            this.accordionControl1.AllowItemSelection = true;
-            this.accordionControl1.Appearance.Item.Normal.BackColor = System.Drawing.Color.Aqua;
-            this.accordionControl1.Appearance.Item.Normal.Options.UseBackColor = true;
-            this.accordionControl1.ContextButtonsOptions.Indent = 1;
-            this.accordionControl1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.accordionControl1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
-            this.accordionControlElement1});
-            this.accordionControl1.ExpandElementMode = DevExpress.XtraBars.Navigation.ExpandElementMode.Single;
-            this.accordionControl1.ExpandGroupOnHeaderClick = false;
-            this.accordionControl1.ItemHeight = 10;
-            this.accordionControl1.Location = new System.Drawing.Point(0, 0);
-            this.accordionControl1.Name = "accordionControl1";
-            this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
-            this.accordionControl1.ShowGroupExpandButtons = false;
-            this.accordionControl1.ShowToolTips = false;
-            this.accordionControl1.Size = new System.Drawing.Size(230, 798);
-            this.accordionControl1.TabIndex = 8;
-            this.accordionControl1.Text = "accordionControl1";
-            // 
-            // accordionControlElement1
-            // 
-            this.accordionControlElement1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
-            this.accordionControlElement5,
-            this.accordionControlElement3,
-            this.accordionControlElement4,
-            this.accordionControlElement6,
-            this.accordionControlElement2,
-            this.accordionControlElement7,
-            this.accordionControlElement8,
-            this.accordionControlElement9,
-            this.accordionControlElement10,
-            this.accordionControlElement11,
-            this.accordionControlElement12,
-            this.accordionControlElement13,
-            this.accordionControlElement14,
-            this.accordionControlElement15});
-            this.accordionControlElement1.Expanded = true;
-            this.accordionControlElement1.HeaderVisible = false;
-            this.accordionControlElement1.Name = "accordionControlElement1";
-            this.accordionControlElement1.Text = "Element1";
-            // 
-            // accordionControlElement5
-            // 
-            this.accordionControlElement5.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.accordionControlElement5.Appearance.Normal.Options.UseFont = true;
-            this.accordionControlElement5.Name = "accordionControlElement5";
-            this.accordionControlElement5.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement5.Text = "1、基本信息";
-            this.accordionControlElement5.Click += new System.EventHandler(this.accordionControlElement5_Click);
-            // 
-            // accordionControlElement3
-            // 
-            this.accordionControlElement3.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.accordionControlElement3.Appearance.Normal.Options.UseFont = true;
-            this.accordionControlElement3.Name = "accordionControlElement3";
-            this.accordionControlElement3.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement3.Text = "2、异常妊娠及分娩史";
-            this.accordionControlElement3.Click += new System.EventHandler(this.accordionControlElement5_Click);
-            // 
-            // accordionControlElement4
-            // 
-            this.accordionControlElement4.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.accordionControlElement4.Appearance.Normal.Options.UseFont = true;
-            this.accordionControlElement4.Name = "accordionControlElement4";
-            this.accordionControlElement4.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement4.Text = "3、妇产科疾病及手术史";
-            this.accordionControlElement4.Click += new System.EventHandler(this.accordionControlElement5_Click);
-            // 
-            // accordionControlElement6
-            // 
-            this.accordionControlElement6.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.accordionControlElement6.Appearance.Normal.Options.UseFont = true;
-            this.accordionControlElement6.Name = "accordionControlElement6";
-            this.accordionControlElement6.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement6.Text = "4、既往病史及手术史";
-            this.accordionControlElement6.Click += new System.EventHandler(this.accordionControlElement5_Click);
-            // 
-            // accordionControlElement2
-            // 
-            this.accordionControlElement2.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.accordionControlElement2.Appearance.Normal.Options.UseFont = true;
-            this.accordionControlElement2.Name = "accordionControlElement2";
-            this.accordionControlElement2.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement2.Text = "5、呼吸系统疾病";
-            this.accordionControlElement2.Click += new System.EventHandler(this.accordionControlElement5_Click);
-            // 
-            // accordionControlElement7
-            // 
-            this.accordionControlElement7.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.accordionControlElement7.Appearance.Normal.Options.UseFont = true;
-            this.accordionControlElement7.Name = "accordionControlElement7";
-            this.accordionControlElement7.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement7.Text = "6、心血管系统疾病";
-            this.accordionControlElement7.Click += new System.EventHandler(this.accordionControlElement5_Click);
-            // 
-            // accordionControlElement8
-            // 
-            this.accordionControlElement8.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.accordionControlElement8.Appearance.Normal.Options.UseFont = true;
-            this.accordionControlElement8.Name = "accordionControlElement8";
-            this.accordionControlElement8.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement8.Text = "7、消化系统疾病";
-            this.accordionControlElement8.Click += new System.EventHandler(this.accordionControlElement5_Click);
-            // 
-            // accordionControlElement9
-            // 
-            this.accordionControlElement9.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.accordionControlElement9.Appearance.Normal.Options.UseFont = true;
-            this.accordionControlElement9.Name = "accordionControlElement9";
-            this.accordionControlElement9.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement9.Text = "8、泌尿系统疾病";
-            this.accordionControlElement9.Click += new System.EventHandler(this.accordionControlElement5_Click);
-            // 
-            // accordionControlElement10
-            // 
-            this.accordionControlElement10.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.accordionControlElement10.Appearance.Normal.Options.UseFont = true;
-            this.accordionControlElement10.Name = "accordionControlElement10";
-            this.accordionControlElement10.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement10.Text = "9、内分泌系统";
-            this.accordionControlElement10.Click += new System.EventHandler(this.accordionControlElement5_Click);
-            // 
-            // accordionControlElement11
-            // 
-            this.accordionControlElement11.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.accordionControlElement11.Appearance.Normal.Options.UseFont = true;
-            this.accordionControlElement11.Name = "accordionControlElement11";
-            this.accordionControlElement11.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement11.Text = "10、血液";
-            this.accordionControlElement11.Click += new System.EventHandler(this.accordionControlElement5_Click);
-            // 
-            // accordionControlElement12
-            // 
-            this.accordionControlElement12.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.accordionControlElement12.Appearance.Normal.Options.UseFont = true;
-            this.accordionControlElement12.Name = "accordionControlElement12";
-            this.accordionControlElement12.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement12.Text = "11、性传播传染病";
-            this.accordionControlElement12.Click += new System.EventHandler(this.accordionControlElement5_Click);
-            // 
-            // accordionControlElement13
-            // 
-            this.accordionControlElement13.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.accordionControlElement13.Appearance.Normal.Options.UseFont = true;
-            this.accordionControlElement13.Name = "accordionControlElement13";
-            this.accordionControlElement13.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement13.Text = "12、神经、精神";
-            this.accordionControlElement13.Click += new System.EventHandler(this.accordionControlElement5_Click);
-            // 
-            // accordionControlElement14
-            // 
-            this.accordionControlElement14.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.accordionControlElement14.Appearance.Normal.Options.UseFont = true;
-            this.accordionControlElement14.Name = "accordionControlElement14";
-            this.accordionControlElement14.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement14.Text = "13、免疫";
-            this.accordionControlElement14.Click += new System.EventHandler(this.accordionControlElement5_Click);
-            // 
-            // accordionControlElement15
-            // 
-            this.accordionControlElement15.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.accordionControlElement15.Appearance.Normal.Options.UseFont = true;
-            this.accordionControlElement15.Name = "accordionControlElement15";
-            this.accordionControlElement15.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement15.Text = "14、其他";
-            this.accordionControlElement15.Click += new System.EventHandler(this.accordionControlElement5_Click);
-            // 
-            // flowLayoutPanel14
-            // 
-            this.flowLayoutPanel14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flowLayoutPanel14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel14.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel14.Location = new System.Drawing.Point(230, 0);
-            this.flowLayoutPanel14.Name = "flowLayoutPanel14";
-            this.flowLayoutPanel14.Size = new System.Drawing.Size(456, 798);
-            this.flowLayoutPanel14.TabIndex = 23;
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(230, 0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(456, 798);
-            this.flowLayoutPanel1.TabIndex = 24;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel1.Controls.Add(this.flowLayoutPanel1);
-            this.panel1.Controls.Add(this.flowLayoutPanel14);
-            this.panel1.Controls.Add(this.accordionControl1);
-            this.panel1.Controls.Add(this.flowLayoutPanel13);
-            this.panel1.Controls.Add(this.flowLayoutPanel12);
-            this.panel1.Controls.Add(this.flowLayoutPanel11);
-            this.panel1.Controls.Add(this.flowLayoutPanel10);
-            this.panel1.Controls.Add(this.flowLayoutPanel9);
-            this.panel1.Controls.Add(this.flowLayoutPanel8);
-            this.panel1.Controls.Add(this.flowLayoutPanel7);
-            this.panel1.Controls.Add(this.flowLayoutPanel6);
-            this.panel1.Controls.Add(this.flowLayoutPanel5);
-            this.panel1.Controls.Add(this.flowLayoutPanel4);
-            this.panel1.Controls.Add(this.flowLayoutPanel3);
-            this.panel1.Controls.Add(this.flowLayoutPanel2);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(758, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(686, 798);
-            this.panel1.TabIndex = 14;
             // 
             // edtName
             // 
@@ -820,12 +487,419 @@
             this.edtage.Size = new System.Drawing.Size(70, 26);
             this.edtage.TabIndex = 1;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.p14);
+            this.panel1.Controls.Add(this.p1);
+            this.panel1.Controls.Add(this.p2);
+            this.panel1.Controls.Add(this.p3);
+            this.panel1.Controls.Add(this.p4);
+            this.panel1.Controls.Add(this.p5);
+            this.panel1.Controls.Add(this.p6);
+            this.panel1.Controls.Add(this.p7);
+            this.panel1.Controls.Add(this.p8);
+            this.panel1.Controls.Add(this.p9);
+            this.panel1.Controls.Add(this.p10);
+            this.panel1.Controls.Add(this.p11);
+            this.panel1.Controls.Add(this.p12);
+            this.panel1.Controls.Add(this.p13);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel1.Location = new System.Drawing.Point(990, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(454, 798);
+            this.panel1.TabIndex = 14;
+            // 
+            // p1
+            // 
+            this.p1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.p1.Location = new System.Drawing.Point(0, 0);
+            this.p1.Name = "p1";
+            this.p1.Size = new System.Drawing.Size(454, 798);
+            this.p1.TabIndex = 0;
+            // 
+            // p2
+            // 
+            this.p2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.p2.Location = new System.Drawing.Point(0, 0);
+            this.p2.Name = "p2";
+            this.p2.Size = new System.Drawing.Size(454, 798);
+            this.p2.TabIndex = 1;
+            // 
+            // p3
+            // 
+            this.p3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.p3.Location = new System.Drawing.Point(0, 0);
+            this.p3.Name = "p3";
+            this.p3.Size = new System.Drawing.Size(454, 798);
+            this.p3.TabIndex = 1;
+            // 
+            // p4
+            // 
+            this.p4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.p4.Location = new System.Drawing.Point(0, 0);
+            this.p4.Name = "p4";
+            this.p4.Size = new System.Drawing.Size(454, 798);
+            this.p4.TabIndex = 1;
+            // 
+            // p5
+            // 
+            this.p5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.p5.Location = new System.Drawing.Point(0, 0);
+            this.p5.Name = "p5";
+            this.p5.Size = new System.Drawing.Size(454, 798);
+            this.p5.TabIndex = 1;
+            // 
+            // p6
+            // 
+            this.p6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.p6.Location = new System.Drawing.Point(0, 0);
+            this.p6.Name = "p6";
+            this.p6.Size = new System.Drawing.Size(454, 798);
+            this.p6.TabIndex = 1;
+            // 
+            // p7
+            // 
+            this.p7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.p7.Location = new System.Drawing.Point(0, 0);
+            this.p7.Name = "p7";
+            this.p7.Size = new System.Drawing.Size(454, 798);
+            this.p7.TabIndex = 1;
+            // 
+            // p8
+            // 
+            this.p8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.p8.Location = new System.Drawing.Point(0, 0);
+            this.p8.Name = "p8";
+            this.p8.Size = new System.Drawing.Size(454, 798);
+            this.p8.TabIndex = 1;
+            // 
+            // p9
+            // 
+            this.p9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.p9.Location = new System.Drawing.Point(0, 0);
+            this.p9.Name = "p9";
+            this.p9.Size = new System.Drawing.Size(454, 798);
+            this.p9.TabIndex = 1;
+            // 
+            // p10
+            // 
+            this.p10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.p10.Location = new System.Drawing.Point(0, 0);
+            this.p10.Name = "p10";
+            this.p10.Size = new System.Drawing.Size(454, 798);
+            this.p10.TabIndex = 1;
+            // 
+            // p11
+            // 
+            this.p11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.p11.Location = new System.Drawing.Point(0, 0);
+            this.p11.Name = "p11";
+            this.p11.Size = new System.Drawing.Size(454, 798);
+            this.p11.TabIndex = 1;
+            // 
+            // p12
+            // 
+            this.p12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.p12.Location = new System.Drawing.Point(0, 0);
+            this.p12.Name = "p12";
+            this.p12.Size = new System.Drawing.Size(454, 798);
+            this.p12.TabIndex = 1;
+            // 
+            // p13
+            // 
+            this.p13.Location = new System.Drawing.Point(0, 0);
+            this.p13.Name = "p13";
+            this.p13.Size = new System.Drawing.Size(454, 798);
+            this.p13.TabIndex = 1;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.radioButton14);
+            this.panel3.Controls.Add(this.radioButton13);
+            this.panel3.Controls.Add(this.radioButton12);
+            this.panel3.Controls.Add(this.radioButton11);
+            this.panel3.Controls.Add(this.radioButton10);
+            this.panel3.Controls.Add(this.radioButton9);
+            this.panel3.Controls.Add(this.radioButton8);
+            this.panel3.Controls.Add(this.radioButton7);
+            this.panel3.Controls.Add(this.radioButton6);
+            this.panel3.Controls.Add(this.radioButton5);
+            this.panel3.Controls.Add(this.radioButton4);
+            this.panel3.Controls.Add(this.radioButton3);
+            this.panel3.Controls.Add(this.radioButton2);
+            this.panel3.Controls.Add(this.radioButton1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel3.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.panel3.Location = new System.Drawing.Point(730, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
+            this.panel3.Name = "panel3";
+            this.panel3.Padding = new System.Windows.Forms.Padding(4);
+            this.panel3.Size = new System.Drawing.Size(260, 798);
+            this.panel3.TabIndex = 105;
+            // 
+            // radioButton14
+            // 
+            this.radioButton14.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radioButton14.AutoSize = true;
+            this.radioButton14.Checked = true;
+            this.radioButton14.Dock = System.Windows.Forms.DockStyle.Top;
+            this.radioButton14.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.radioButton14.FlatAppearance.CheckedBackColor = System.Drawing.Color.Aqua;
+            this.radioButton14.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
+            this.radioButton14.Location = new System.Drawing.Point(4, 381);
+            this.radioButton14.Name = "radioButton14";
+            this.radioButton14.Size = new System.Drawing.Size(252, 29);
+            this.radioButton14.TabIndex = 114;
+            this.radioButton14.TabStop = true;
+            this.radioButton14.Text = "14、其他";
+            this.radioButton14.UseVisualStyleBackColor = true;
+            this.radioButton14.Click += new System.EventHandler(this.radioButton2_Click);
+            // 
+            // radioButton13
+            // 
+            this.radioButton13.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radioButton13.AutoSize = true;
+            this.radioButton13.Checked = true;
+            this.radioButton13.Dock = System.Windows.Forms.DockStyle.Top;
+            this.radioButton13.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.radioButton13.FlatAppearance.CheckedBackColor = System.Drawing.Color.Aqua;
+            this.radioButton13.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
+            this.radioButton13.Location = new System.Drawing.Point(4, 352);
+            this.radioButton13.Name = "radioButton13";
+            this.radioButton13.Size = new System.Drawing.Size(252, 29);
+            this.radioButton13.TabIndex = 113;
+            this.radioButton13.TabStop = true;
+            this.radioButton13.Text = "13、免疫";
+            this.radioButton13.UseVisualStyleBackColor = true;
+            this.radioButton13.Click += new System.EventHandler(this.radioButton2_Click);
+            // 
+            // radioButton12
+            // 
+            this.radioButton12.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radioButton12.AutoSize = true;
+            this.radioButton12.Checked = true;
+            this.radioButton12.Dock = System.Windows.Forms.DockStyle.Top;
+            this.radioButton12.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.radioButton12.FlatAppearance.CheckedBackColor = System.Drawing.Color.Aqua;
+            this.radioButton12.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
+            this.radioButton12.Location = new System.Drawing.Point(4, 323);
+            this.radioButton12.Name = "radioButton12";
+            this.radioButton12.Size = new System.Drawing.Size(252, 29);
+            this.radioButton12.TabIndex = 112;
+            this.radioButton12.TabStop = true;
+            this.radioButton12.Text = "12、神经、精神";
+            this.radioButton12.UseVisualStyleBackColor = true;
+            this.radioButton12.Click += new System.EventHandler(this.radioButton2_Click);
+            // 
+            // radioButton11
+            // 
+            this.radioButton11.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radioButton11.AutoSize = true;
+            this.radioButton11.Checked = true;
+            this.radioButton11.Dock = System.Windows.Forms.DockStyle.Top;
+            this.radioButton11.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.radioButton11.FlatAppearance.CheckedBackColor = System.Drawing.Color.Aqua;
+            this.radioButton11.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
+            this.radioButton11.Location = new System.Drawing.Point(4, 294);
+            this.radioButton11.Name = "radioButton11";
+            this.radioButton11.Size = new System.Drawing.Size(252, 29);
+            this.radioButton11.TabIndex = 111;
+            this.radioButton11.TabStop = true;
+            this.radioButton11.Text = "11、性传播传染病";
+            this.radioButton11.UseVisualStyleBackColor = true;
+            this.radioButton11.Click += new System.EventHandler(this.radioButton2_Click);
+            // 
+            // radioButton10
+            // 
+            this.radioButton10.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radioButton10.AutoSize = true;
+            this.radioButton10.Checked = true;
+            this.radioButton10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.radioButton10.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.radioButton10.FlatAppearance.CheckedBackColor = System.Drawing.Color.Aqua;
+            this.radioButton10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
+            this.radioButton10.Location = new System.Drawing.Point(4, 265);
+            this.radioButton10.Name = "radioButton10";
+            this.radioButton10.Size = new System.Drawing.Size(252, 29);
+            this.radioButton10.TabIndex = 110;
+            this.radioButton10.TabStop = true;
+            this.radioButton10.Text = "10、血液";
+            this.radioButton10.UseVisualStyleBackColor = true;
+            this.radioButton10.Click += new System.EventHandler(this.radioButton2_Click);
+            // 
+            // radioButton9
+            // 
+            this.radioButton9.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radioButton9.AutoSize = true;
+            this.radioButton9.Checked = true;
+            this.radioButton9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.radioButton9.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.radioButton9.FlatAppearance.CheckedBackColor = System.Drawing.Color.Aqua;
+            this.radioButton9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
+            this.radioButton9.Location = new System.Drawing.Point(4, 236);
+            this.radioButton9.Name = "radioButton9";
+            this.radioButton9.Size = new System.Drawing.Size(252, 29);
+            this.radioButton9.TabIndex = 109;
+            this.radioButton9.TabStop = true;
+            this.radioButton9.Text = "9、内分泌系统";
+            this.radioButton9.UseVisualStyleBackColor = true;
+            this.radioButton9.Click += new System.EventHandler(this.radioButton2_Click);
+            // 
+            // radioButton8
+            // 
+            this.radioButton8.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radioButton8.AutoSize = true;
+            this.radioButton8.Checked = true;
+            this.radioButton8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.radioButton8.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.radioButton8.FlatAppearance.CheckedBackColor = System.Drawing.Color.Aqua;
+            this.radioButton8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
+            this.radioButton8.Location = new System.Drawing.Point(4, 207);
+            this.radioButton8.Name = "radioButton8";
+            this.radioButton8.Size = new System.Drawing.Size(252, 29);
+            this.radioButton8.TabIndex = 108;
+            this.radioButton8.TabStop = true;
+            this.radioButton8.Text = "8、泌尿系统疾病";
+            this.radioButton8.UseVisualStyleBackColor = true;
+            this.radioButton8.Click += new System.EventHandler(this.radioButton2_Click);
+            // 
+            // radioButton7
+            // 
+            this.radioButton7.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radioButton7.AutoSize = true;
+            this.radioButton7.Checked = true;
+            this.radioButton7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.radioButton7.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.radioButton7.FlatAppearance.CheckedBackColor = System.Drawing.Color.Aqua;
+            this.radioButton7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
+            this.radioButton7.Location = new System.Drawing.Point(4, 178);
+            this.radioButton7.Name = "radioButton7";
+            this.radioButton7.Size = new System.Drawing.Size(252, 29);
+            this.radioButton7.TabIndex = 107;
+            this.radioButton7.TabStop = true;
+            this.radioButton7.Text = "7、消化系统疾病";
+            this.radioButton7.UseVisualStyleBackColor = true;
+            this.radioButton7.Click += new System.EventHandler(this.radioButton2_Click);
+            // 
+            // radioButton6
+            // 
+            this.radioButton6.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radioButton6.AutoSize = true;
+            this.radioButton6.Checked = true;
+            this.radioButton6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.radioButton6.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.radioButton6.FlatAppearance.CheckedBackColor = System.Drawing.Color.Aqua;
+            this.radioButton6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
+            this.radioButton6.Location = new System.Drawing.Point(4, 149);
+            this.radioButton6.Name = "radioButton6";
+            this.radioButton6.Size = new System.Drawing.Size(252, 29);
+            this.radioButton6.TabIndex = 106;
+            this.radioButton6.TabStop = true;
+            this.radioButton6.Text = "6、心血管系统疾病";
+            this.radioButton6.UseVisualStyleBackColor = true;
+            this.radioButton6.Click += new System.EventHandler(this.radioButton2_Click);
+            // 
+            // radioButton5
+            // 
+            this.radioButton5.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radioButton5.AutoSize = true;
+            this.radioButton5.Checked = true;
+            this.radioButton5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.radioButton5.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.radioButton5.FlatAppearance.CheckedBackColor = System.Drawing.Color.Aqua;
+            this.radioButton5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
+            this.radioButton5.Location = new System.Drawing.Point(4, 120);
+            this.radioButton5.Name = "radioButton5";
+            this.radioButton5.Size = new System.Drawing.Size(252, 29);
+            this.radioButton5.TabIndex = 105;
+            this.radioButton5.TabStop = true;
+            this.radioButton5.Text = "5、呼吸系统疾病";
+            this.radioButton5.UseVisualStyleBackColor = true;
+            this.radioButton5.Click += new System.EventHandler(this.radioButton2_Click);
+            // 
+            // radioButton4
+            // 
+            this.radioButton4.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radioButton4.AutoSize = true;
+            this.radioButton4.Checked = true;
+            this.radioButton4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.radioButton4.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.radioButton4.FlatAppearance.CheckedBackColor = System.Drawing.Color.Aqua;
+            this.radioButton4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
+            this.radioButton4.Location = new System.Drawing.Point(4, 91);
+            this.radioButton4.Name = "radioButton4";
+            this.radioButton4.Size = new System.Drawing.Size(252, 29);
+            this.radioButton4.TabIndex = 104;
+            this.radioButton4.TabStop = true;
+            this.radioButton4.Text = "4、既往病史及手术史";
+            this.radioButton4.UseVisualStyleBackColor = true;
+            this.radioButton4.Click += new System.EventHandler(this.radioButton2_Click);
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Checked = true;
+            this.radioButton3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.radioButton3.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.radioButton3.FlatAppearance.CheckedBackColor = System.Drawing.Color.Aqua;
+            this.radioButton3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
+            this.radioButton3.Location = new System.Drawing.Point(4, 62);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(252, 29);
+            this.radioButton3.TabIndex = 103;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "3、妇产科疾病及手术史";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButton3.Click += new System.EventHandler(this.radioButton2_Click);
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Checked = true;
+            this.radioButton2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.radioButton2.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.radioButton2.FlatAppearance.CheckedBackColor = System.Drawing.Color.Aqua;
+            this.radioButton2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
+            this.radioButton2.Location = new System.Drawing.Point(4, 33);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(252, 29);
+            this.radioButton2.TabIndex = 102;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "2、异常妊娠及分娩史";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.Click += new System.EventHandler(this.radioButton2_Click);
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.radioButton1.Location = new System.Drawing.Point(4, 4);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(252, 29);
+            this.radioButton1.TabIndex = 100;
+            this.radioButton1.Text = "1、基本信息";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.Click += new System.EventHandler(this.radioButton2_Click);
+            // 
+            // p14
+            // 
+            this.p14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.p14.Location = new System.Drawing.Point(0, 0);
+            this.p14.Name = "p14";
+            this.p14.Size = new System.Drawing.Size(454, 798);
+            this.p14.TabIndex = 2;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1444, 843);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.edtcsrq);
             this.Controls.Add(this.edtbgrq);
             this.Controls.Add(this.edtpgsj);
@@ -870,8 +944,6 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).EndInit();
-            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.edtName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.edtmzh.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.edtsfzh.Properties)).EndInit();
@@ -881,6 +953,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.edtbgjg.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.edtyz.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.edtage.Properties)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -899,37 +974,6 @@
         private DevExpress.XtraEditors.DateEdit edtbgrq;
         private DevExpress.XtraEditors.TextEdit edtbgr;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel5;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel6;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel7;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel8;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel9;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel10;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel11;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel12;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel13;
-        private DevExpress.XtraBars.Navigation.AccordionControl accordionControl1;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement1;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement5;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement3;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement4;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement6;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement2;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement7;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement8;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement9;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement10;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement11;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement12;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement13;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement14;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement15;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel14;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button3;
@@ -952,6 +996,36 @@
         private System.Windows.Forms.Label label15;
         private DevExpress.XtraEditors.TextEdit edtyz;
         private DevExpress.XtraEditors.TextEdit edtage;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.RadioButton radioButton14;
+        private System.Windows.Forms.RadioButton radioButton13;
+        private System.Windows.Forms.RadioButton radioButton12;
+        private System.Windows.Forms.RadioButton radioButton11;
+        private System.Windows.Forms.RadioButton radioButton10;
+        private System.Windows.Forms.RadioButton radioButton9;
+        private System.Windows.Forms.RadioButton radioButton8;
+        private System.Windows.Forms.RadioButton radioButton7;
+        private System.Windows.Forms.RadioButton radioButton6;
+        private System.Windows.Forms.RadioButton radioButton5;
+        private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.Panel p1;
+        private System.Windows.Forms.Panel p2;
+        private System.Windows.Forms.Panel p3;
+        private System.Windows.Forms.Panel p4;
+        private System.Windows.Forms.Panel p5;
+        private System.Windows.Forms.Panel p6;
+        private System.Windows.Forms.Panel p7;
+        private System.Windows.Forms.Panel p8;
+        private System.Windows.Forms.Panel p9;
+        private System.Windows.Forms.Panel p10;
+        private System.Windows.Forms.Panel p11;
+        private System.Windows.Forms.Panel p12;
+        private System.Windows.Forms.Panel p13;
+        private System.Windows.Forms.Panel p14;
     }
 }
 

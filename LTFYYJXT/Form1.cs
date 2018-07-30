@@ -4,13 +4,12 @@ using System.Data;
 using System.Data.OracleClient;
 using System.Drawing;
 using System.Windows.Forms;
-using DevExpress.XtraBars.Navigation;
 using DevExpress.XtraPrinting.Native;
 using DevExpress.XtraReports.UI;
 
 namespace LTFYYJXT
 {
-    public struct struct产妇妊娠风险筛查
+    public struct stuTag
     {
         public int ID;
         public string scxm;
@@ -28,11 +27,12 @@ namespace LTFYYJXT
         public DataValue dv;
         private readonly DataValueList dvl;
         private bool historyData;
+
+
         public OracleCommand oraComm;
-
-
         public OracleConnection oraconn;
         public OracleDataAdapter oraDA;
+
         public List<CheckBox> selectLst;
 
         public Form1()
@@ -106,9 +106,12 @@ namespace LTFYYJXT
         {
             selectLst = new List<CheckBox>();
             CheckBoxList = new List<CheckBox>();
-            var con = string.Format("Data Source={0};User ID={2};Password={1}", "HIS", "zlhis", "HIS");
+
+            var con = string.Format("Data Source={0};User ID={2};Password={1}", "ORA155", "US", "us");
             oraconn = new OracleConnection(con);
             oraconn.Open();
+
+
             oraComm = new OracleCommand("select * from 产妇妊娠风险筛查", oraconn);
             oraDA = new OracleDataAdapter(oraComm);
             dt = new DataTable("产妇妊娠风险筛查");
@@ -122,54 +125,67 @@ namespace LTFYYJXT
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            var cb = sender as CheckBox;
-            label8.Text = "";
-            int v, j = 0;
-            if (cb.Checked)
-                selectLst.Add(cb);
-
-            else
-                selectLst.Remove(cb);
-
-            foreach (var x in selectLst)
+            if (sender != null)
             {
-                if (string.IsNullOrEmpty(label8.Text))
-                    label8.Text = "   " + x.Text;
+                var cb = sender as CheckBox;
+                label8.Text = "";
+                int v, j = 0;
+                if (cb.Checked)
+                    selectLst.Add(cb);
+
                 else
-                    label8.Text = label8.Text + "\n   " + x.Text;
+                    selectLst.Remove(cb);
 
-                v = Convert.ToInt32(x.Tag);
-                if (v > j) j = v;
+                foreach (var x in selectLst)
+                {
+                    stuTag t = (stuTag)x.Tag;
+                    if (string.IsNullOrEmpty(label8.Text))
+                        label8.Text = "   " +t.scnr + ":" + x.Text;
+                    else
+                        label8.Text = label8.Text + "\n   " + t.scnr + ":" + x.Text;
+
+                    stuTag vv = (stuTag)x.Tag;
+                    v = vv.jb; ;
+                    if (v > j) j = v;
+                }
+
+                foreach (var var in CheckBoxList)
+                {
+                    stuTag v1 = (stuTag)var.Tag;
+                    if (j == 0) var.Visible = true;
+                    if (Convert.ToInt32(v1.jb) <= j && selectLst.IndexOf(var) < 0)
+                        var.Visible = false;
+                }
+
+                switch (j)
+                {
+                    case 1:
+                        label8.ForeColor = Color.Yellow;
+                        break;
+                    case 2:
+                        label8.ForeColor = Color.Coral;
+                        break;
+                    case 3:
+                        label8.ForeColor = Color.Red;
+                        break;
+                    case 4:
+                        label8.ForeColor = Color.Magenta;
+                        break;
+                }
+                currentLevel = j;
             }
-
-            foreach (var var in CheckBoxList)
+            else
             {
-                if (j == 0) var.Visible = true;
-                if (Convert.ToInt32(var.Tag) <= j && selectLst.IndexOf(var) < 0)
-                    var.Visible = false;
+
+
             }
 
-            switch (j)
-            {
-                case 1:
-                    label8.ForeColor = Color.Yellow;
-                    break;
-                case 2:
-                    label8.ForeColor = Color.Coral;
-                    break;
-                case 3:
-                    label8.ForeColor = Color.Red;
-                    break;
-                case 4:
-                    label8.ForeColor = Color.Magenta;
-                    break;
-            }
-            currentLevel = j;
+
         }
 
-        private struct产妇妊娠风险筛查 SetData(DataRow dr)
+        private stuTag SetData(DataRow dr)
         {
-            struct产妇妊娠风险筛查 tmp;
+            stuTag tmp;
             tmp.ID = Convert.ToInt32(dr["ID"].ToString());
             tmp.scnr = dr["筛查内容"].ToString();
             tmp.scxm = dr["筛查项目"].ToString();
@@ -177,7 +193,7 @@ namespace LTFYYJXT
             return tmp;
         }
 
-        private void initDataControl(FlowLayoutPanel fl, string strFilter)
+        private void initDataControl(Panel fl, string strFilter)
         {
             DataRow[] drs;
             drs = dt.Select(strFilter);
@@ -192,7 +208,10 @@ namespace LTFYYJXT
                     cb.Size = new Size(450, 40);
                 else
                     cb.AutoSize = true;
-                cb.Tag = Convert.ToInt32(dr["级别"].ToString());
+
+
+                cb.Tag = SetData(dr);
+                //cb.Tag = Convert.ToInt32(dr["级别"].ToString());
 
 
                 switch (dr["级别"].ToString())
@@ -215,6 +234,8 @@ namespace LTFYYJXT
                 cb.CheckedChanged += checkBox1_CheckedChanged;
                 fl.Controls.Add(cb);
 
+                cb.Dock = DockStyle.Top;
+                cb.FlatStyle = FlatStyle.Flat;
 
                 CheckBoxList.Add(cb);
             }
@@ -222,74 +243,71 @@ namespace LTFYYJXT
 
         private void InitSelectText()
         {
-            initDataControl(flowLayoutPanel1, "筛查项目='基本情况'");
-            initDataControl(flowLayoutPanel2, "筛查项目='异常妊娠及分娩史'");
-            initDataControl(flowLayoutPanel3, "筛查项目='妇产科疾病及手术史'");
-            initDataControl(flowLayoutPanel4, "筛查项目='既往疾病及手术史'");
-            initDataControl(flowLayoutPanel5, "筛查项目='呼吸系统疾病'");
-            initDataControl(flowLayoutPanel6, "筛查项目='心血管系统疾病'");
-            initDataControl(flowLayoutPanel7, "筛查项目='消化系统疾病'");
-            initDataControl(flowLayoutPanel8, "筛查项目='泌尿系统疾病'");
-            initDataControl(flowLayoutPanel9, "筛查项目='内分泌'");
-            initDataControl(flowLayoutPanel10, "筛查项目='血液'");
-            initDataControl(flowLayoutPanel11, "筛查项目='性传播传染病'");
-            initDataControl(flowLayoutPanel12, "筛查项目='精神、神经'");
-            initDataControl(flowLayoutPanel13, "筛查项目='免疫'");
-            initDataControl(flowLayoutPanel14, "筛查项目='其他'");
+            initDataControl(p1, "筛查项目='基本情况'");
+            initDataControl(p2, "筛查项目='异常妊娠及分娩史'");
+            initDataControl(p3, "筛查项目='妇产科疾病及手术史'");
+            initDataControl(p4, "筛查项目='既往疾病及手术史'");
+            initDataControl(p5, "筛查项目='呼吸系统疾病'");
+            initDataControl(p6, "筛查项目='心血管系统疾病'");
+            initDataControl(p7, "筛查项目='消化系统疾病'");
+            initDataControl(p8, "筛查项目='泌尿系统疾病'");
+            initDataControl(p9, "筛查项目='内分泌'");
+            initDataControl(p10, "筛查项目='血液'");
+            initDataControl(p11, "筛查项目='性传播传染病'");
+            initDataControl(p12, "筛查项目='精神、神经'");
+            initDataControl(p13, "筛查项目='免疫'");
+            initDataControl(p14, "筛查项目='其他'");
         }
 
 
-        private void navigationPane1_SelectedPageChanged(object sender, SelectedPageChangedEventArgs e)
-        {
-        }
 
 
-        private void accordionControlElement5_Click(object sender, EventArgs e)
+        private void ShowContext_Click(object sender, EventArgs e)
         {
-            var ctl = sender as AccordionControlElement;
+            var ctl = sender as RadioButton;
             switch (ctl.Text)
             {
                 case "1、基本信息":
-                    flowLayoutPanel1.BringToFront();
+                    p1.BringToFront();
                     break;
                 case "2、异常妊娠及分娩史":
-                    flowLayoutPanel2.BringToFront();
+                    p2.BringToFront();
                     break;
                 case "3、妇产科疾病及手术史":
-                    flowLayoutPanel3.BringToFront();
+                    p3.BringToFront();
                     break;
                 case "4、既往病史及手术史":
-                    flowLayoutPanel4.BringToFront();
+                    p4.BringToFront();
                     break;
                 case "5、呼吸系统疾病":
-                    flowLayoutPanel5.BringToFront();
+                    p5.BringToFront();
                     break;
                 case "6、心血管系统疾病":
-                    flowLayoutPanel6.BringToFront();
+                    p6.BringToFront();
                     break;
                 case "7、消化系统疾病":
-                    flowLayoutPanel7.BringToFront();
+                    p7.BringToFront();
                     break;
                 case "8、泌尿系统疾病":
-                    flowLayoutPanel8.BringToFront();
+                    p8.BringToFront();
                     break;
                 case "9、内分泌系统":
-                    flowLayoutPanel9.BringToFront();
+                    p9.BringToFront();
                     break;
                 case "10、血液":
-                    flowLayoutPanel10.BringToFront();
+                    p10.BringToFront();
                     break;
                 case "11、性传播传染病":
-                    flowLayoutPanel11.BringToFront();
+                    p11.BringToFront();
                     break;
                 case "12、神经、精神":
-                    flowLayoutPanel12.BringToFront();
+                    p12.BringToFront();
                     break;
                 case "13、免疫":
-                    flowLayoutPanel13.BringToFront();
+                    p13.BringToFront();
                     break;
                 case "14、其他":
-                    flowLayoutPanel14.BringToFront();
+                    p14.BringToFront();
                     break;
             }
         }
@@ -312,6 +330,22 @@ namespace LTFYYJXT
             edtmzh.Text = dr["门诊号"].ToString();
             edtlxdh.Text = dr["联系电话"].ToString();
             edtpgsj.Text = dr["评估时间"].ToString().IsEmpty() ? DateTime.Now.ToShortDateString() : dr["评估时间"].ToString();
+
+            string[] v = dr["筛查ID"].ToString().Split(';');
+            foreach (string vv in v)
+            {
+                foreach (CheckBox cb in CheckBoxList)
+                {
+                    stuTag t = (stuTag) cb.Tag;
+                    if (t.ID.ToString() == vv)
+                    {
+                        cb.Checked = true;
+                        cb.Visible = true;
+                        break;
+                    }
+                }
+            }
+
         }
 
 
@@ -377,8 +411,7 @@ namespace LTFYYJXT
                 cb.Visible = true;
                 cb.Checked = false;
             }
-            accordionControlElement5_Click(accordionControlElement5, null);
-            accordionControl1.SelectElement(accordionControlElement5);
+            ShowContext_Click(radioButton1, null);
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -389,7 +422,6 @@ namespace LTFYYJXT
 
             xx.ShowPreviewDialog();
         }
-
 
         private void button3_Click_1(object sender, EventArgs e)
         {
@@ -458,8 +490,16 @@ namespace LTFYYJXT
         private void SaveDataToDB(DataValue dv)
         {
             var sql = "insert into 筛查信息(ID,姓名,年龄,出生日期,身份证号,孕周,联系电话,初步诊断,评估时间," +
-                      "报告人,报告日期,评估分级,门诊号) values ({0},'{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}')";
+                      "报告人,报告日期,评估分级,门诊号,筛查ID) values ({0},'{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}')";
 
+            string strv = "";
+
+            foreach (var v in selectLst)
+            {
+                stuTag t = (stuTag) v.Tag;
+                strv = t.ID.ToString() + ";" + strv;
+
+            }
 
             if (historyData)
             {
@@ -468,7 +508,7 @@ namespace LTFYYJXT
             }
             oraComm.CommandText = string.Format(sql, dv.Mzh, dv.Name, dv.Age, dv.Birthday, dv.Sfzh, dv.Yz, dv.Lxdh,
                 dv.Cbzd, dv.Pgsj,
-                dv.Bgr, dv.Bgrq, dv.Pgfj, dv.Mzh);
+                dv.Bgr, dv.Bgrq, dv.Pgfj, dv.Mzh,strv);
             oraComm.ExecuteNonQuery();
         }
 
@@ -490,5 +530,22 @@ namespace LTFYYJXT
         {
             if (e.KeyChar == 13) button3_Click_1(sender, e);
         }
-    }
+
+        private void radioButton2_Click(object sender, EventArgs e)
+        {
+            this.ShowContext_Click(sender, e);
+        }
+
+        private void label8_DoubleClick(object sender, EventArgs e)
+        {
+            selectLst.Clear();
+            currentLevel = 0;
+            foreach (var var in CheckBoxList)
+            {
+                var.Visible = true;
+                var.Checked = false;
+            }
+
+        }
+}
 }
