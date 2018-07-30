@@ -33,6 +33,8 @@ namespace LTFYYJXT
         public OracleConnection oraconn;
         public OracleDataAdapter oraDA;
 
+        
+
         public List<CheckBox> selectLst;
 
         public Form1()
@@ -107,7 +109,7 @@ namespace LTFYYJXT
             selectLst = new List<CheckBox>();
             CheckBoxList = new List<CheckBox>();
 
-            var con = string.Format("Data Source={0};User ID={2};Password={1}", "ORA155", "US", "us");
+            var con = string.Format("Data Source={0};User ID={1};Password={2}", "ORA155", "us", "US");
             oraconn = new OracleConnection(con);
             oraconn.Open();
 
@@ -140,9 +142,9 @@ namespace LTFYYJXT
                 {
                     stuTag t = (stuTag)x.Tag;
                     if (string.IsNullOrEmpty(label8.Text))
-                        label8.Text = "   " +t.scnr + ":" + x.Text;
+                        label8.Text = "   " +t.scxm + ":" + x.Text;
                     else
-                        label8.Text = label8.Text + "\n   " + t.scnr + ":" + x.Text;
+                        label8.Text = label8.Text + "\n   " + t.scxm + ":" + x.Text;
 
                     stuTag vv = (stuTag)x.Tag;
                     v = vv.jb; ;
@@ -523,7 +525,7 @@ namespace LTFYYJXT
             }
             string sex;
             edtcsrq.Text = GetBirthdayAndSex(edtsfzh.Text, out sex);
-            edtage.Text = (DateTime.Now.Year - edtcsrq.DateTime.Year).ToString();
+            edtage.Text = (DateTime.Now.Year - edtcsrq.DateTime.Year).ToString() ;
         }
 
         private void textEdit1_KeyPress(object sender, KeyPressEventArgs e)

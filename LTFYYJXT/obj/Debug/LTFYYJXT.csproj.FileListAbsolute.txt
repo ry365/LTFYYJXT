@@ -3,7 +3,6 @@ D:\Source\2019\LTFYYJXT\LTFYYJXT\obj\Debug\LTFYYJXT.Form1.resources
 D:\Source\2019\LTFYYJXT\LTFYYJXT\obj\Debug\LTFYYJXT.Properties.Resources.resources
 D:\Source\2019\LTFYYJXT\LTFYYJXT\obj\Debug\LTFYYJXT.XtraReport1.resources
 D:\Source\2019\LTFYYJXT\LTFYYJXT\obj\Debug\LTFYYJXT.csproj.GenerateResource.Cache
-D:\Source\2019\LTFYYJXT\LTFYYJXT\obj\Debug\LTFYYJXT.exe.licenses
 D:\Source\2019\LTFYYJXT\LTFYYJXT\bin\Debug\LTFYYJXT.exe.config
 D:\Source\2019\LTFYYJXT\LTFYYJXT\bin\Debug\LTFYYJXT.exe
 D:\Source\2019\LTFYYJXT\LTFYYJXT\bin\Debug\LTFYYJXT.pdb
