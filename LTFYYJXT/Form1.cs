@@ -27,7 +27,7 @@ namespace LTFYYJXT
         public DataValue dv;
         private readonly DataValueList dvl;
         private bool historyData;
-
+        private bool zs;
 
         public OracleCommand oraComm;
         public OracleConnection oraconn;
@@ -109,13 +109,13 @@ namespace LTFYYJXT
             selectLst = new List<CheckBox>();
             CheckBoxList = new List<CheckBox>();
 
-            var con = string.Format("Data Source={0};User ID={1};Password={2}", "HIS", "zlhis", "HIS");
-  //          var con = string.Format("Data Source={0};User ID={1};Password={2}", "ORA155", "us", "US");
+     //         var con = string.Format("Data Source={0};User ID={1};Password={2}", "HIS", "zlhis", "HIS");
+          var con = string.Format("Data Source={0};User ID={1};Password={2}", "ORA155", "us", "US");
             oraconn = new OracleConnection(con);
             oraconn.Open();
 
 
-            oraComm = new OracleCommand("select * from 产妇妊娠风险筛查", oraconn);
+            oraComm = new OracleCommand("select * from 产妇妊娠风险筛查 order by 筛查项目 ", oraconn);
             oraDA = new OracleDataAdapter(oraComm);
             dt = new DataTable("产妇妊娠风险筛查");
             oraDA.Fill(dt);
@@ -128,10 +128,46 @@ namespace LTFYYJXT
             edtbgrq.DateTime = DateTime.Now;
         }
 
+        private void setSCNRText()
+        {
+            string title="";
+
+            foreach (var var in CheckBoxList)
+            {
+                stuTag t = (stuTag)var.Tag;
+                if (var.Checked == true)
+                {
+                    if (string.IsNullOrEmpty(label8.Text))
+                    {
+                        title = t.scxm;
+                        label8.Text = "★" + t.scxm + ":\n    Δ " + var.Text;
+                    }
+                    else
+                    {
+                        if (title == t.scxm)
+                            label8.Text = label8.Text + "\n    Δ " + var.Text;
+                        else
+                        {
+                            label8.Text = label8.Text + "\n\n★" + t.scxm + ":\n    Δ " + var.Text;
+                            title = t.scxm;
+
+                        }
+
+                    }
+                }
+            }
+            
+        }
+
+
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             if (sender != null)
             {
+
+                string title="";
+                string context;
+
                 var cb = sender as CheckBox;
                 label8.Text = "";
                 int v, j = 0;
@@ -141,26 +177,46 @@ namespace LTFYYJXT
                 else
                     selectLst.Remove(cb);
 
+                setSCNRText();
                 foreach (var x in selectLst)
                 {
                     stuTag t = (stuTag)x.Tag;
+                  /* 
                     if (string.IsNullOrEmpty(label8.Text))
-                        label8.Text = "   " +t.scxm + ":" + x.Text;
+                    {
+                        title = t.scxm;
+                        label8.Text = "★" +t.scxm + ":\n    " + x.Text;
+                    }
                     else
-                        label8.Text = label8.Text + "\n   " + t.scxm + ":" + x.Text;
+                    {
+                        if (title == t.scxm)
+                            label8.Text = label8.Text + "\n    " + x.Text;
+                        else
+                        {
+                            label8.Text = label8.Text + "\n\n★" + t.scxm + ":\n    " + x.Text;
+                            title = t.scxm;
 
+                        }
+
+                    }
+                    */
                     stuTag vv = (stuTag)x.Tag;
-                    v = vv.jb; ;
-                    if (v > j) j = v;
+                    v = vv.jb;
+                    if (v < 4)
+                    {
+                        if (v > j) j = v;
+                    }
+                    else
+                        zs = true;
                 }
 
-                foreach (var var in CheckBoxList)
+ /*              foreach (var var in CheckBoxList)
                 {
                     stuTag v1 = (stuTag)var.Tag;
                     if (j == 0) var.Visible = true;
                     if (Convert.ToInt32(v1.jb) <= j && selectLst.IndexOf(var) < 0)
                         var.Visible = false;
-                }
+                }*/
 
                 switch (j)
                 {
@@ -264,7 +320,14 @@ namespace LTFYYJXT
             initDataControl(p14, "筛查项目='其他'");
         }
 
-
+        private void clearSCXM()
+        {
+            foreach (var cb in CheckBoxList)
+            {
+                cb.Visible = true;
+                cb.Checked = false;
+            }
+        }
 
 
         private void ShowContext_Click(object sender, EventArgs e)
@@ -319,6 +382,8 @@ namespace LTFYYJXT
 
         private void UpdateData(DataRow dr)
         {
+            label8.Text = "";
+            clearSCXM();
             edtage.Text = dr["年龄"].ToString();
             edtbgr.Text = dr["报告人"].ToString().IsEmpty() ? edtbgr.Text : dr["报告人"].ToString();
             ;
@@ -335,7 +400,7 @@ namespace LTFYYJXT
             edtmzh.Text = dr["门诊号"].ToString();
             edtlxdh.Text = dr["联系电话"].ToString();
             edtpgsj.Text = dr["评估时间"].ToString().IsEmpty() ? DateTime.Now.ToShortDateString() : dr["评估时间"].ToString();
-
+            dv.Id = Convert.ToInt32(dr["ID"]);
             string[] v = dr["筛查ID"].ToString().Split(';');
             foreach (string vv in v)
             {
@@ -350,6 +415,7 @@ namespace LTFYYJXT
                     }
                 }
             }
+
 
         }
 
@@ -369,6 +435,8 @@ namespace LTFYYJXT
             dv.Mzh = edtmzh.Text;
             dv.Lxdh = edtlxdh.Text;
             dv.Pgsj = edtpgsj.Text;
+            dv.Zs = zs;
+            dv.Scjg = label8.Text;
             switch (currentLevel)
             {
                 case 1:
@@ -384,7 +452,10 @@ namespace LTFYYJXT
                     dv.Pgfj = "紫色";
                     break;
             }
-
+            if (dv.Zs)
+            {
+                dv.Pgfj = dv.Pgfj + ",紫色";
+            }
 
             dvl.Add(dv);
         }
@@ -394,9 +465,10 @@ namespace LTFYYJXT
         {
             UpdateData();
             SaveDataToDB(dv);
-
+            edtName.Enabled = true;
             clearControlText();
             textEdit1.Focus();
+            dv=new DataValue();
         }
 
 
@@ -432,29 +504,48 @@ namespace LTFYYJXT
         {
             edtmzh.Text = textEdit1.Text;
             historyData = false;
+            edtName.Enabled = true;
+            dv = new DataValue();
+
+
             dt.Clear();
-            oraComm.CommandText = "select * from view_筛查信息_1 where 门诊号=" + textEdit1.Text;
+
+            oraComm.CommandText = "select * from view_筛查信息_2 where 门诊号=" + textEdit1.Text;
             oraDA.Fill(dt);
             if (dt.Rows.Count == 0)
             {
-                oraComm.CommandText = "select * from view_筛查信息_2 where 门诊号=" + textEdit1.Text;
-                oraDA.Fill(dt);
-                if (dt.Rows.Count == 0)
-                {
-                    MessageBox.Show("未找到门诊号对应的信息，请重新输入后再试！");
-                    textEdit1.SelectAll();
-                    textEdit1.Focus();
-                }
-                else
-                {
-                    UpdateData(dt.Rows[0]);
-                }
+                MessageBox.Show("未找到门诊号对应的信息，请重新输入后再试！");
+                textEdit1.SelectAll();
+                textEdit1.Focus();
             }
             else
             {
-                historyData = true;
+                historyData = false;
                 UpdateData(dt.Rows[0]);
             }
+            /*   oraComm.CommandText = "select * from view_筛查信息_1 where 门诊号=" + textEdit1.Text;
+              oraDA.Fill(dt);
+             if (dt.Rows.Count == 0)
+              {
+                  oraComm.CommandText = "select * from view_筛查信息_2 where 门诊号=" + textEdit1.Text;
+                  oraDA.Fill(dt);
+                  if (dt.Rows.Count == 0)
+                  {
+                      MessageBox.Show("未找到门诊号对应的信息，请重新输入后再试！");
+                      textEdit1.SelectAll();
+                      textEdit1.Focus();
+                  }
+                  else
+                  {
+                      UpdateData(dt.Rows[0]);
+                  }
+              }
+              else
+              {
+                  historyData = true;
+                  UpdateData(dt.Rows[0]);
+              }
+              */
         }
 
         public string GetBirthdayAndSex(string identityCard, out string sex)
@@ -495,7 +586,7 @@ namespace LTFYYJXT
         private void SaveDataToDB(DataValue dv)
         {
             var sql = "insert into 筛查信息(ID,姓名,年龄,出生日期,身份证号,孕周,联系电话,初步诊断,评估时间," +
-                      "报告人,报告日期,评估分级,门诊号,筛查ID) values ({0},'{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}')";
+                      "报告人,报告日期,评估分级,门诊号,筛查ID,筛查结果) values ( ry_scxx.nextval,'{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}')";
 
             string strv = "";
 
@@ -508,12 +599,12 @@ namespace LTFYYJXT
 
             if (historyData)
             {
-                oraComm.CommandText = "delete 筛查信息 where 门诊号= '" + dv.Mzh + "'";
+                oraComm.CommandText = "delete 筛查信息 where ID= " + dv.Id ;
                 oraComm.ExecuteNonQuery();
             }
             oraComm.CommandText = string.Format(sql, dv.Mzh, dv.Name, dv.Age, dv.Birthday, dv.Sfzh, dv.Yz, dv.Lxdh,
                 dv.Cbzd, dv.Pgsj,
-                dv.Bgr, dv.Bgrq, dv.Pgfj, dv.Mzh,strv);
+                dv.Bgr, dv.Bgrq, dv.Pgfj, dv.Mzh,strv,dv.Scjg);
             oraComm.ExecuteNonQuery();
         }
 
@@ -552,5 +643,30 @@ namespace LTFYYJXT
             }
 
         }
-}
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            dt.Rows.Clear();
+            oraComm.CommandText = "select * from view_筛查信息_1 where 门诊号=" + textEdit1.Text;
+            oraComm.CommandText = "select * from view_筛查信息_1";
+
+            oraDA.Fill(dt);
+            if (dt.Rows.Count == 0)
+            {
+                    MessageBox.Show("未找到门诊号对应的信息，请重新输入后再试！");
+            }
+            else
+            {
+                historyData = true;
+                History h = new History();
+                h.dt = dt;
+                if (h.ShowDialog() == DialogResult.OK)
+                {
+                    UpdateData(h.dr);
+                    edtName.Enabled = false;
+
+                }
+            }
+        }
+    }
 }

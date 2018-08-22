@@ -43,6 +43,7 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.label6 = new System.Windows.Forms.Label();
@@ -63,6 +64,7 @@
             this.edtyz = new DevExpress.XtraEditors.TextEdit();
             this.edtage = new DevExpress.XtraEditors.TextEdit();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.p14 = new System.Windows.Forms.Panel();
             this.p1 = new System.Windows.Forms.Panel();
             this.p2 = new System.Windows.Forms.Panel();
             this.p3 = new System.Windows.Forms.Panel();
@@ -91,7 +93,7 @@
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.p14 = new System.Windows.Forms.Panel();
+            this.ckhShowItem = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.edtcbzd.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.edtpgsj.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.edtpgsj.Properties)).BeginInit();
@@ -243,6 +245,7 @@
             this.panel2.Controls.Add(this.button5);
             this.panel2.Controls.Add(this.button4);
             this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.button6);
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.textEdit1);
             this.panel2.Controls.Add(this.label6);
@@ -254,7 +257,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(378, 7);
+            this.button5.Location = new System.Drawing.Point(577, 7);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(100, 29);
             this.button5.TabIndex = 19;
@@ -264,7 +267,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(640, 7);
+            this.button4.Location = new System.Drawing.Point(839, 7);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(112, 29);
             this.button4.TabIndex = 18;
@@ -273,7 +276,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(529, 7);
+            this.button1.Location = new System.Drawing.Point(728, 7);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(105, 29);
             this.button1.TabIndex = 18;
@@ -281,13 +284,23 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(340, 7);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(93, 29);
+            this.button6.TabIndex = 14;
+            this.button6.Text = "修改";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(234, 7);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(93, 29);
             this.button3.TabIndex = 14;
-            this.button3.Text = "查  询";
+            this.button3.Text = "新 建";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
@@ -510,6 +523,14 @@
             this.panel1.Size = new System.Drawing.Size(454, 798);
             this.panel1.TabIndex = 14;
             // 
+            // p14
+            // 
+            this.p14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.p14.Location = new System.Drawing.Point(0, 0);
+            this.p14.Name = "p14";
+            this.p14.Size = new System.Drawing.Size(454, 798);
+            this.p14.TabIndex = 2;
+            // 
             // p1
             // 
             this.p1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -615,6 +636,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.ckhShowItem);
             this.panel3.Controls.Add(this.radioButton14);
             this.panel3.Controls.Add(this.radioButton13);
             this.panel3.Controls.Add(this.radioButton12);
@@ -885,13 +907,17 @@
             this.radioButton1.UseVisualStyleBackColor = true;
             this.radioButton1.Click += new System.EventHandler(this.radioButton2_Click);
             // 
-            // p14
+            // ckhShowItem
             // 
-            this.p14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.p14.Location = new System.Drawing.Point(0, 0);
-            this.p14.Name = "p14";
-            this.p14.Size = new System.Drawing.Size(454, 798);
-            this.p14.TabIndex = 2;
+            this.ckhShowItem.AutoSize = true;
+            this.ckhShowItem.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ckhShowItem.Location = new System.Drawing.Point(4, 410);
+            this.ckhShowItem.Name = "ckhShowItem";
+            this.ckhShowItem.Size = new System.Drawing.Size(252, 23);
+            this.ckhShowItem.TabIndex = 115;
+            this.ckhShowItem.Text = "显示筛查信息";
+            this.ckhShowItem.UseVisualStyleBackColor = true;
+            this.ckhShowItem.Visible = false;
             // 
             // Form1
             // 
@@ -1026,6 +1052,8 @@
         private System.Windows.Forms.Panel p12;
         private System.Windows.Forms.Panel p13;
         private System.Windows.Forms.Panel p14;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.CheckBox ckhShowItem;
     }
 }
 

@@ -176,3 +176,5 @@ D:\Source\2019\LTFYYJXT\LTFYYJXT\bin\Debug\ru\DevExpress.Xpo.v15.2.resources.dll
 D:\Source\2019\LTFYYJXT\LTFYYJXT\obj\Debug\LTFYYJXT.exe
 D:\Source\2019\LTFYYJXT\LTFYYJXT\obj\Debug\LTFYYJXT.pdb
 D:\Source\2019\LTFYYJXT\LTFYYJXT\obj\Debug\LTFYYJXT.csprojResolveAssemblyReference.cache
+D:\Source\2019\LTFYYJXT\LTFYYJXT\obj\Debug\LTFYYJXT.exe.licenses
+D:\Source\2019\LTFYYJXT\LTFYYJXT\obj\Debug\LTFYYJXT.History.resources

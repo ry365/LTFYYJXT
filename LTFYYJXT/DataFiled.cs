@@ -36,5 +36,8 @@ namespace LTFYYJXT
         public string Bgjg { get; set; } = "吉林市龙潭区妇幼保健院";
 
         public string Bgrq { get; set; } = DateTime.Now.ToString("yyyy年MM月dd日");
+
+        public bool Zs { get; set; } = false;
+        public string Scjg { get; set; } = "";
     }
 }
