@@ -24,6 +24,7 @@ namespace LTFYYJXT
         public string Age { get; set; } = "";
 
         public string Yz { get; set; } = "";
+        public string Yzt { get; set; } = "";
 
         public string Cbzd { get; set; } = "";
 

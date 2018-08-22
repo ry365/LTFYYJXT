@@ -79,6 +79,7 @@
             this.p12 = new System.Windows.Forms.Panel();
             this.p13 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.ckhShowItem = new System.Windows.Forms.CheckBox();
             this.radioButton14 = new System.Windows.Forms.RadioButton();
             this.radioButton13 = new System.Windows.Forms.RadioButton();
             this.radioButton12 = new System.Windows.Forms.RadioButton();
@@ -93,7 +94,7 @@
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.ckhShowItem = new System.Windows.Forms.CheckBox();
+            this.edtyzt = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.edtcbzd.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.edtpgsj.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.edtpgsj.Properties)).BeginInit();
@@ -113,15 +114,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.edtage.Properties)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.edtyzt.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // edtcbzd
             // 
+            this.edtcbzd.EnterMoveNextControl = true;
             this.edtcbzd.Location = new System.Drawing.Point(18, 94);
             this.edtcbzd.Margin = new System.Windows.Forms.Padding(4);
             this.edtcbzd.Name = "edtcbzd";
             this.edtcbzd.Size = new System.Drawing.Size(692, 128);
-            this.edtcbzd.TabIndex = 7;
+            this.edtcbzd.TabIndex = 8;
             // 
             // label1
             // 
@@ -176,7 +179,7 @@
             // label8
             // 
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(45, 339);
+            this.label8.Location = new System.Drawing.Point(37, 330);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(673, 423);
@@ -195,6 +198,7 @@
             // edtpgsj
             // 
             this.edtpgsj.EditValue = new System.DateTime(2018, 7, 7, 7, 59, 41, 421);
+            this.edtpgsj.EnterMoveNextControl = true;
             this.edtpgsj.Location = new System.Drawing.Point(91, 227);
             this.edtpgsj.Name = "edtpgsj";
             this.edtpgsj.Properties.Appearance.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -209,11 +213,12 @@
             this.edtpgsj.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.edtpgsj.Properties.Mask.EditMask = "yyyy-MM-dd";
             this.edtpgsj.Size = new System.Drawing.Size(128, 26);
-            this.edtpgsj.TabIndex = 8;
+            this.edtpgsj.TabIndex = 9;
             // 
             // edtbgrq
             // 
             this.edtbgrq.EditValue = new System.DateTime(2018, 7, 7, 8, 1, 52, 383);
+            this.edtbgrq.EnterMoveNextControl = true;
             this.edtbgrq.Location = new System.Drawing.Point(575, 229);
             this.edtbgrq.Name = "edtbgrq";
             this.edtbgrq.Properties.Appearance.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -228,17 +233,19 @@
             this.edtbgrq.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.edtbgrq.Properties.Mask.EditMask = "yyyy-MM-dd";
             this.edtbgrq.Size = new System.Drawing.Size(135, 26);
-            this.edtbgrq.TabIndex = 10;
+            this.edtbgrq.TabIndex = 11;
             // 
             // edtbgr
             // 
+            this.edtbgr.EnterMoveNextControl = true;
             this.edtbgr.Location = new System.Drawing.Point(326, 227);
             this.edtbgr.Margin = new System.Windows.Forms.Padding(4);
             this.edtbgr.Name = "edtbgr";
             this.edtbgr.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.edtbgr.Properties.Appearance.Options.UseFont = true;
             this.edtbgr.Size = new System.Drawing.Size(152, 26);
-            this.edtbgr.TabIndex = 99;
+            this.edtbgr.TabIndex = 10;
+            this.edtbgr.Enter += new System.EventHandler(this.edtyz_Enter);
             // 
             // panel2
             // 
@@ -250,18 +257,18 @@
             this.panel2.Controls.Add(this.textEdit1);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 798);
+            this.panel2.Location = new System.Drawing.Point(0, 767);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1444, 45);
+            this.panel2.Size = new System.Drawing.Size(1436, 45);
             this.panel2.TabIndex = 17;
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(577, 7);
+            this.button5.Location = new System.Drawing.Point(646, 7);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(100, 29);
             this.button5.TabIndex = 19;
-            this.button5.Text = "打印";
+            this.button5.Text = "打印【&P】";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
@@ -276,11 +283,11 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(728, 7);
+            this.button1.Location = new System.Drawing.Point(495, 7);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(105, 29);
+            this.button1.Size = new System.Drawing.Size(141, 29);
             this.button1.TabIndex = 18;
-            this.button1.Text = "保存并新建";
+            this.button1.Text = "保存并新建【&S】";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -288,9 +295,9 @@
             // 
             this.button6.Location = new System.Drawing.Point(340, 7);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(93, 29);
+            this.button6.Size = new System.Drawing.Size(117, 29);
             this.button6.TabIndex = 14;
-            this.button6.Text = "修改";
+            this.button6.Text = "查询【&Q】";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
@@ -298,9 +305,9 @@
             // 
             this.button3.Location = new System.Drawing.Point(234, 7);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(93, 29);
+            this.button3.Size = new System.Drawing.Size(107, 29);
             this.button3.TabIndex = 14;
-            this.button3.Text = "新 建";
+            this.button3.Text = "新 建【&N】";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
@@ -312,7 +319,8 @@
             this.textEdit1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit1.Properties.Appearance.Options.UseFont = true;
             this.textEdit1.Size = new System.Drawing.Size(162, 26);
-            this.textEdit1.TabIndex = 13;
+            this.textEdit1.TabIndex = 0;
+            this.textEdit1.Enter += new System.EventHandler(this.edtyz_Enter);
             this.textEdit1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textEdit1_KeyPress);
             // 
             // label6
@@ -327,6 +335,7 @@
             // 
             // edtName
             // 
+            this.edtName.EnterMoveNextControl = true;
             this.edtName.Location = new System.Drawing.Point(90, 6);
             this.edtName.Margin = new System.Windows.Forms.Padding(4);
             this.edtName.Name = "edtName";
@@ -334,6 +343,7 @@
             this.edtName.Properties.Appearance.Options.UseFont = true;
             this.edtName.Size = new System.Drawing.Size(129, 26);
             this.edtName.TabIndex = 1;
+            this.edtName.Enter += new System.EventHandler(this.edtyz_Enter);
             // 
             // label7
             // 
@@ -348,13 +358,14 @@
             // edtmzh
             // 
             this.edtmzh.Enabled = false;
+            this.edtmzh.EnterMoveNextControl = true;
             this.edtmzh.Location = new System.Drawing.Point(90, 260);
             this.edtmzh.Margin = new System.Windows.Forms.Padding(4);
             this.edtmzh.Name = "edtmzh";
             this.edtmzh.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.edtmzh.Properties.Appearance.Options.UseFont = true;
             this.edtmzh.Size = new System.Drawing.Size(152, 26);
-            this.edtmzh.TabIndex = 11;
+            this.edtmzh.TabIndex = 12;
             // 
             // label9
             // 
@@ -389,6 +400,7 @@
             // edtsfzh
             // 
             this.edtsfzh.EditValue = "";
+            this.edtsfzh.EnterMoveNextControl = true;
             this.edtsfzh.Location = new System.Drawing.Point(340, 6);
             this.edtsfzh.Margin = new System.Windows.Forms.Padding(4);
             this.edtsfzh.Name = "edtsfzh";
@@ -396,6 +408,7 @@
             this.edtsfzh.Properties.Appearance.Options.UseFont = true;
             this.edtsfzh.Size = new System.Drawing.Size(193, 26);
             this.edtsfzh.TabIndex = 2;
+            this.edtsfzh.Enter += new System.EventHandler(this.edtyz_Enter);
             this.edtsfzh.Leave += new System.EventHandler(this.edtsfzh_Leave);
             // 
             // label12
@@ -410,17 +423,20 @@
             // 
             // edtlxdh
             // 
+            this.edtlxdh.EnterMoveNextControl = true;
             this.edtlxdh.Location = new System.Drawing.Point(495, 37);
             this.edtlxdh.Margin = new System.Windows.Forms.Padding(4);
             this.edtlxdh.Name = "edtlxdh";
             this.edtlxdh.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.edtlxdh.Properties.Appearance.Options.UseFont = true;
             this.edtlxdh.Size = new System.Drawing.Size(215, 26);
-            this.edtlxdh.TabIndex = 6;
+            this.edtlxdh.TabIndex = 7;
+            this.edtlxdh.Enter += new System.EventHandler(this.edtyz_Enter);
             // 
             // edtcsrq
             // 
             this.edtcsrq.EditValue = new System.DateTime(2018, 7, 7, 8, 1, 52, 383);
+            this.edtcsrq.EnterMoveNextControl = true;
             this.edtcsrq.Location = new System.Drawing.Point(252, 38);
             this.edtcsrq.Name = "edtcsrq";
             this.edtcsrq.Properties.Appearance.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -435,28 +451,29 @@
             this.edtcsrq.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.edtcsrq.Properties.Mask.EditMask = "yyyy-MM-dd";
             this.edtcsrq.Size = new System.Drawing.Size(135, 26);
-            this.edtcsrq.TabIndex = 5;
+            this.edtcsrq.TabIndex = 6;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(597, 11);
+            this.label13.Location = new System.Drawing.Point(556, 9);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(48, 16);
+            this.label13.Size = new System.Drawing.Size(144, 16);
             this.label13.TabIndex = 4;
-            this.label13.Text = "孕周:";
+            this.label13.Text = "孕:     周     天";
             // 
             // edtbgjg
             // 
             this.edtbgjg.EditValue = "吉林市龙潭区妇幼保健计划生育服务中心";
+            this.edtbgjg.EnterMoveNextControl = true;
             this.edtbgjg.Location = new System.Drawing.Point(377, 262);
             this.edtbgjg.Margin = new System.Windows.Forms.Padding(4);
             this.edtbgjg.Name = "edtbgjg";
             this.edtbgjg.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.edtbgjg.Properties.Appearance.Options.UseFont = true;
             this.edtbgjg.Size = new System.Drawing.Size(333, 26);
-            this.edtbgjg.TabIndex = 12;
+            this.edtbgjg.TabIndex = 13;
             // 
             // label14
             // 
@@ -480,25 +497,28 @@
             // 
             // edtyz
             // 
-            this.edtyz.EditValue = ((short)(0));
-            this.edtyz.Location = new System.Drawing.Point(640, 6);
+            this.edtyz.EnterMoveNextControl = true;
+            this.edtyz.Location = new System.Drawing.Point(586, 6);
             this.edtyz.Margin = new System.Windows.Forms.Padding(4);
             this.edtyz.Name = "edtyz";
             this.edtyz.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.edtyz.Properties.Appearance.Options.UseFont = true;
-            this.edtyz.Size = new System.Drawing.Size(70, 26);
-            this.edtyz.TabIndex = 1;
+            this.edtyz.Size = new System.Drawing.Size(31, 26);
+            this.edtyz.TabIndex = 3;
+            this.edtyz.Enter += new System.EventHandler(this.edtyz_Enter);
             // 
             // edtage
             // 
             this.edtage.EditValue = ((short)(0));
+            this.edtage.EnterMoveNextControl = true;
             this.edtage.Location = new System.Drawing.Point(90, 40);
             this.edtage.Margin = new System.Windows.Forms.Padding(4);
             this.edtage.Name = "edtage";
             this.edtage.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.edtage.Properties.Appearance.Options.UseFont = true;
             this.edtage.Size = new System.Drawing.Size(70, 26);
-            this.edtage.TabIndex = 1;
+            this.edtage.TabIndex = 5;
+            this.edtage.Enter += new System.EventHandler(this.edtyz_Enter);
             // 
             // panel1
             // 
@@ -518,9 +538,9 @@
             this.panel1.Controls.Add(this.p12);
             this.panel1.Controls.Add(this.p13);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(990, 0);
+            this.panel1.Location = new System.Drawing.Point(982, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(454, 798);
+            this.panel1.Size = new System.Drawing.Size(454, 767);
             this.panel1.TabIndex = 14;
             // 
             // p14
@@ -528,7 +548,7 @@
             this.p14.Dock = System.Windows.Forms.DockStyle.Fill;
             this.p14.Location = new System.Drawing.Point(0, 0);
             this.p14.Name = "p14";
-            this.p14.Size = new System.Drawing.Size(454, 798);
+            this.p14.Size = new System.Drawing.Size(454, 767);
             this.p14.TabIndex = 2;
             // 
             // p1
@@ -536,7 +556,7 @@
             this.p1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.p1.Location = new System.Drawing.Point(0, 0);
             this.p1.Name = "p1";
-            this.p1.Size = new System.Drawing.Size(454, 798);
+            this.p1.Size = new System.Drawing.Size(454, 767);
             this.p1.TabIndex = 0;
             // 
             // p2
@@ -544,7 +564,7 @@
             this.p2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.p2.Location = new System.Drawing.Point(0, 0);
             this.p2.Name = "p2";
-            this.p2.Size = new System.Drawing.Size(454, 798);
+            this.p2.Size = new System.Drawing.Size(454, 767);
             this.p2.TabIndex = 1;
             // 
             // p3
@@ -552,7 +572,7 @@
             this.p3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.p3.Location = new System.Drawing.Point(0, 0);
             this.p3.Name = "p3";
-            this.p3.Size = new System.Drawing.Size(454, 798);
+            this.p3.Size = new System.Drawing.Size(454, 767);
             this.p3.TabIndex = 1;
             // 
             // p4
@@ -560,7 +580,7 @@
             this.p4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.p4.Location = new System.Drawing.Point(0, 0);
             this.p4.Name = "p4";
-            this.p4.Size = new System.Drawing.Size(454, 798);
+            this.p4.Size = new System.Drawing.Size(454, 767);
             this.p4.TabIndex = 1;
             // 
             // p5
@@ -568,7 +588,7 @@
             this.p5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.p5.Location = new System.Drawing.Point(0, 0);
             this.p5.Name = "p5";
-            this.p5.Size = new System.Drawing.Size(454, 798);
+            this.p5.Size = new System.Drawing.Size(454, 767);
             this.p5.TabIndex = 1;
             // 
             // p6
@@ -576,7 +596,7 @@
             this.p6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.p6.Location = new System.Drawing.Point(0, 0);
             this.p6.Name = "p6";
-            this.p6.Size = new System.Drawing.Size(454, 798);
+            this.p6.Size = new System.Drawing.Size(454, 767);
             this.p6.TabIndex = 1;
             // 
             // p7
@@ -584,7 +604,7 @@
             this.p7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.p7.Location = new System.Drawing.Point(0, 0);
             this.p7.Name = "p7";
-            this.p7.Size = new System.Drawing.Size(454, 798);
+            this.p7.Size = new System.Drawing.Size(454, 767);
             this.p7.TabIndex = 1;
             // 
             // p8
@@ -592,7 +612,7 @@
             this.p8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.p8.Location = new System.Drawing.Point(0, 0);
             this.p8.Name = "p8";
-            this.p8.Size = new System.Drawing.Size(454, 798);
+            this.p8.Size = new System.Drawing.Size(454, 767);
             this.p8.TabIndex = 1;
             // 
             // p9
@@ -600,7 +620,7 @@
             this.p9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.p9.Location = new System.Drawing.Point(0, 0);
             this.p9.Name = "p9";
-            this.p9.Size = new System.Drawing.Size(454, 798);
+            this.p9.Size = new System.Drawing.Size(454, 767);
             this.p9.TabIndex = 1;
             // 
             // p10
@@ -608,7 +628,7 @@
             this.p10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.p10.Location = new System.Drawing.Point(0, 0);
             this.p10.Name = "p10";
-            this.p10.Size = new System.Drawing.Size(454, 798);
+            this.p10.Size = new System.Drawing.Size(454, 767);
             this.p10.TabIndex = 1;
             // 
             // p11
@@ -616,7 +636,7 @@
             this.p11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.p11.Location = new System.Drawing.Point(0, 0);
             this.p11.Name = "p11";
-            this.p11.Size = new System.Drawing.Size(454, 798);
+            this.p11.Size = new System.Drawing.Size(454, 767);
             this.p11.TabIndex = 1;
             // 
             // p12
@@ -624,7 +644,7 @@
             this.p12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.p12.Location = new System.Drawing.Point(0, 0);
             this.p12.Name = "p12";
-            this.p12.Size = new System.Drawing.Size(454, 798);
+            this.p12.Size = new System.Drawing.Size(454, 767);
             this.p12.TabIndex = 1;
             // 
             // p13
@@ -653,12 +673,24 @@
             this.panel3.Controls.Add(this.radioButton1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel3.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.panel3.Location = new System.Drawing.Point(730, 0);
+            this.panel3.Location = new System.Drawing.Point(722, 0);
             this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Padding = new System.Windows.Forms.Padding(4);
-            this.panel3.Size = new System.Drawing.Size(260, 798);
+            this.panel3.Size = new System.Drawing.Size(260, 767);
             this.panel3.TabIndex = 105;
+            // 
+            // ckhShowItem
+            // 
+            this.ckhShowItem.AutoSize = true;
+            this.ckhShowItem.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ckhShowItem.Location = new System.Drawing.Point(4, 410);
+            this.ckhShowItem.Name = "ckhShowItem";
+            this.ckhShowItem.Size = new System.Drawing.Size(252, 23);
+            this.ckhShowItem.TabIndex = 115;
+            this.ckhShowItem.Text = "显示筛查信息";
+            this.ckhShowItem.UseVisualStyleBackColor = true;
+            this.ckhShowItem.Visible = false;
             // 
             // radioButton14
             // 
@@ -907,24 +939,26 @@
             this.radioButton1.UseVisualStyleBackColor = true;
             this.radioButton1.Click += new System.EventHandler(this.radioButton2_Click);
             // 
-            // ckhShowItem
+            // edtyzt
             // 
-            this.ckhShowItem.AutoSize = true;
-            this.ckhShowItem.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ckhShowItem.Location = new System.Drawing.Point(4, 410);
-            this.ckhShowItem.Name = "ckhShowItem";
-            this.ckhShowItem.Size = new System.Drawing.Size(252, 23);
-            this.ckhShowItem.TabIndex = 115;
-            this.ckhShowItem.Text = "显示筛查信息";
-            this.ckhShowItem.UseVisualStyleBackColor = true;
-            this.ckhShowItem.Visible = false;
+            this.edtyzt.EnterMoveNextControl = true;
+            this.edtyzt.Location = new System.Drawing.Point(646, 6);
+            this.edtyzt.Margin = new System.Windows.Forms.Padding(4);
+            this.edtyzt.Name = "edtyzt";
+            this.edtyzt.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.edtyzt.Properties.Appearance.Options.UseFont = true;
+            this.edtyzt.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.edtyzt.Properties.HideSelection = false;
+            this.edtyzt.Size = new System.Drawing.Size(31, 26);
+            this.edtyzt.TabIndex = 4;
+            this.edtyzt.Enter += new System.EventHandler(this.edtyz_Enter);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1444, 843);
+            this.ClientSize = new System.Drawing.Size(1436, 812);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.edtcsrq);
             this.Controls.Add(this.edtbgrq);
@@ -944,6 +978,7 @@
             this.Controls.Add(this.edtsfzh);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.edtage);
+            this.Controls.Add(this.edtyzt);
             this.Controls.Add(this.edtyz);
             this.Controls.Add(this.edtName);
             this.Controls.Add(this.label11);
@@ -956,11 +991,14 @@
             this.Controls.Add(this.label14);
             this.Controls.Add(this.panel2);
             this.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "龙潭区妇幼保健医院产前风险筛查";
+            this.Text = "龙潭区妇幼保健院产前风险筛查";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
             ((System.ComponentModel.ISupportInitialize)(this.edtcbzd.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.edtpgsj.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.edtpgsj.Properties)).EndInit();
@@ -982,6 +1020,7 @@
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.edtyzt.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1054,6 +1093,7 @@
         private System.Windows.Forms.Panel p14;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.CheckBox ckhShowItem;
+        private DevExpress.XtraEditors.TextEdit edtyzt;
     }
 }
 

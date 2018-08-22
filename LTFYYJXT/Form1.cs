@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.OracleClient;
 using System.Drawing;
+using System.Linq.Expressions;
 using System.Windows.Forms;
+using DevExpress.XtraEditors;
 using DevExpress.XtraPrinting.Native;
 using DevExpress.XtraReports.UI;
 
@@ -109,8 +111,8 @@ namespace LTFYYJXT
             selectLst = new List<CheckBox>();
             CheckBoxList = new List<CheckBox>();
 
-     //         var con = string.Format("Data Source={0};User ID={1};Password={2}", "HIS", "zlhis", "HIS");
-          var con = string.Format("Data Source={0};User ID={1};Password={2}", "ORA155", "us", "US");
+           // var con = string.Format("Data Source={0};User ID={1};Password={2}", "HIS", "zlhis", "HIS");
+            var con = string.Format("Data Source={0};User ID={1};Password={2}", "ORA155", "us", "US");
             oraconn = new OracleConnection(con);
             oraconn.Open();
 
@@ -305,6 +307,7 @@ namespace LTFYYJXT
         private void InitSelectText()
         {
             initDataControl(p1, "筛查项目='基本情况'");
+            p1.Tag = radioButton1;
             initDataControl(p2, "筛查项目='异常妊娠及分娩史'");
             initDataControl(p3, "筛查项目='妇产科疾病及手术史'");
             initDataControl(p4, "筛查项目='既往疾病及手术史'");
@@ -318,6 +321,20 @@ namespace LTFYYJXT
             initDataControl(p12, "筛查项目='精神、神经'");
             initDataControl(p13, "筛查项目='免疫'");
             initDataControl(p14, "筛查项目='其他'");
+            p2.Tag = radioButton2;
+            p3.Tag = radioButton3;
+            p4.Tag = radioButton4;
+            p5.Tag = radioButton5;
+            p6.Tag = radioButton6;
+            p7.Tag = radioButton7;
+            p8.Tag = radioButton8;
+            p9.Tag = radioButton9;
+            p10.Tag = radioButton10;
+            p11.Tag = radioButton11;
+            p12.Tag = radioButton12;
+            p13.Tag = radioButton13;
+            p14.Tag = radioButton14;
+
         }
 
         private void clearSCXM()
@@ -380,6 +397,61 @@ namespace LTFYYJXT
             }
         }
 
+
+        private void UpdateDataNewHistory(DataRow dr)
+        {
+            label8.Text = "";
+            clearSCXM();
+            edtage.Text = dr["年龄"].ToString();
+        //    edtbgr.Text = dr["报告人"].ToString().IsEmpty() ? edtbgr.Text : dr["报告人"].ToString();
+            ;
+       //     edtbgrq.Text = dr["报告日期"].ToString().IsEmpty() ? DateTime.Now.ToShortDateString() : dr["报告日期"].ToString();
+
+            edtcsrq.Text = dr["出生日期"].ToString(); //.DateTime.ToString("yyyy年MM月dd日");
+            edtcbzd.Text = dr["初步诊断"].ToString();
+            ;
+            edtsfzh.Text = dr["身份证号"].ToString();
+            edtsfzh_Leave(this, null);
+
+
+            //    edtbgjg.Text = dr["报告机构"].ToString();
+            edtName.Text = dr["姓名"].ToString();
+            edtmzh.Text = dr["门诊号"].ToString();
+            edtlxdh.Text = dr["联系电话"].ToString();
+        //    edtpgsj.Text = dr["评估时间"].ToString().IsEmpty() ? DateTime.Now.ToShortDateString() : dr["评估时间"].ToString();
+        //    dv.Id = Convert.ToInt32(dr["ID"]);
+            string[] v = dr["筛查ID"].ToString().Split(';');
+            bool first = true;
+            foreach (string vv in v)
+            {
+                foreach (CheckBox cb in CheckBoxList)
+                {
+                    stuTag t = (stuTag)cb.Tag;
+                    if (t.ID.ToString() == vv)
+                    {
+                        cb.Checked = true;
+                        cb.Visible = true;
+                        if (first)
+                        {
+                            first = false;
+                            RadioButton fff = cb.Parent.Tag as RadioButton;
+                            if (fff == null) continue;
+                            fff.Checked = true;
+                            cb.Parent.BringToFront();
+                           
+                        }
+                           
+
+                        break;
+                     
+                    }
+                }
+            }
+
+        }
+
+
+
         private void UpdateData(DataRow dr)
         {
             label8.Text = "";
@@ -394,7 +466,16 @@ namespace LTFYYJXT
             ;
             edtsfzh.Text = dr["身份证号"].ToString();
             edtsfzh_Leave(this, null);
-            edtyz.Text = dr["孕周"].ToString();
+            try
+            {
+                edtyz.Text = dr["孕周"].ToString().Split('.')[0];
+                edtyzt.Text = dr["孕周"].ToString().Split('.')[1];
+            }
+            catch (Exception e)
+            {
+         
+            }
+
             //    edtbgjg.Text = dr["报告机构"].ToString();
             edtName.Text = dr["姓名"].ToString();
             edtmzh.Text = dr["门诊号"].ToString();
@@ -437,6 +518,7 @@ namespace LTFYYJXT
             dv.Pgsj = edtpgsj.Text;
             dv.Zs = zs;
             dv.Scjg = label8.Text;
+            dv.Yzt = edtyzt.Text;
             switch (currentLevel)
             {
                 case 1:
@@ -460,15 +542,27 @@ namespace LTFYYJXT
             dvl.Add(dv);
         }
 
+        private void SaveData()
+        {
+            if (edtyz.Text.IsEmpty())
+            {
+                MessageBox.Show("孕周不能为空！");
+                edtyz.Focus();
+            }
+            UpdateData();
+            SaveDataToDB(dv);
+            historyData = true;
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            UpdateData();
-            SaveDataToDB(dv);
+            SaveData();
             edtName.Enabled = true;
             clearControlText();
+            textEdit1.SelectAll();
             textEdit1.Focus();
             dv=new DataValue();
+
         }
 
 
@@ -482,6 +576,7 @@ namespace LTFYYJXT
             edtlxdh.Text = "";
             label8.Text = "";
             edtyz.Text = "";
+            edtyzt.Text = "";
             edtmzh.Text = "";
             foreach (var cb in CheckBoxList)
             {
@@ -489,19 +584,22 @@ namespace LTFYYJXT
                 cb.Checked = false;
             }
             ShowContext_Click(radioButton1, null);
+            zs = false;
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             UpdateData();
+            SaveData();
             var xx = new XtraReport1();
             xx.DataSource = dvl;
 
-            xx.ShowPreviewDialog();
+            xx.ShowRibbonPreviewDialog();
         }
 
         private void button3_Click_1(object sender, EventArgs e)
         {
+            textEdit1.SelectAll();
             edtmzh.Text = textEdit1.Text;
             historyData = false;
             edtName.Enabled = true;
@@ -510,20 +608,21 @@ namespace LTFYYJXT
 
             dt.Clear();
 
-            oraComm.CommandText = "select * from view_筛查信息_2 where 门诊号=" + textEdit1.Text;
-            oraDA.Fill(dt);
-            if (dt.Rows.Count == 0)
-            {
-                MessageBox.Show("未找到门诊号对应的信息，请重新输入后再试！");
-                textEdit1.SelectAll();
-                textEdit1.Focus();
-            }
-            else
-            {
-                historyData = false;
-                UpdateData(dt.Rows[0]);
-            }
-            /*   oraComm.CommandText = "select * from view_筛查信息_1 where 门诊号=" + textEdit1.Text;
+//            oraComm.CommandText = "select * from view_筛查信息_2 where 门诊号=" + textEdit1.Text;
+//            oraDA.Fill(dt);
+//            if (dt.Rows.Count == 0)
+//            {
+//                MessageBox.Show("未找到门诊号对应的信息，请重新输入后再试！");
+//                textEdit1.SelectAll();
+//                textEdit1.Focus();
+//            }
+//            else
+//            {
+//                edtyz.Focus();
+//                historyData = false;
+//                UpdateData(dt.Rows[0]);
+//            }
+              oraComm.CommandText = "select * from view_筛查信息_1 where 门诊号=" + textEdit1.Text  ;
               oraDA.Fill(dt);
              if (dt.Rows.Count == 0)
               {
@@ -534,6 +633,7 @@ namespace LTFYYJXT
                       MessageBox.Show("未找到门诊号对应的信息，请重新输入后再试！");
                       textEdit1.SelectAll();
                       textEdit1.Focus();
+                      return;
                   }
                   else
                   {
@@ -542,10 +642,12 @@ namespace LTFYYJXT
               }
               else
               {
-                  historyData = true;
-                  UpdateData(dt.Rows[0]);
+                  historyData = false;
+                  UpdateDataNewHistory(dt.Rows[0]);
               }
-              */
+            edtyz.Focus();
+
+
         }
 
         public string GetBirthdayAndSex(string identityCard, out string sex)
@@ -585,8 +687,17 @@ namespace LTFYYJXT
 
         private void SaveDataToDB(DataValue dv)
         {
+
+                var getSQLID = "select ry_scxx.nextval as ID from dual";
+                oraComm.CommandText = getSQLID;
+                DataTable tmp = new DataTable();
+                oraDA.Fill(tmp);
+                int ID = Convert.ToInt32(tmp.Rows[0]["ID"]);
+
+               
+
             var sql = "insert into 筛查信息(ID,姓名,年龄,出生日期,身份证号,孕周,联系电话,初步诊断,评估时间," +
-                      "报告人,报告日期,评估分级,门诊号,筛查ID,筛查结果) values ( ry_scxx.nextval,'{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}')";
+                      "报告人,报告日期,评估分级,门诊号,筛查ID,筛查结果) values ( {0},'{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}')";
 
             string strv = "";
 
@@ -602,10 +713,14 @@ namespace LTFYYJXT
                 oraComm.CommandText = "delete 筛查信息 where ID= " + dv.Id ;
                 oraComm.ExecuteNonQuery();
             }
-            oraComm.CommandText = string.Format(sql, dv.Mzh, dv.Name, dv.Age, dv.Birthday, dv.Sfzh, dv.Yz, dv.Lxdh,
+            oraComm.CommandText = string.Format(sql, ID, dv.Name, dv.Age, dv.Birthday, dv.Sfzh, dv.Yz+"."+dv.Yzt, dv.Lxdh,
                 dv.Cbzd, dv.Pgsj,
                 dv.Bgr, dv.Bgrq, dv.Pgfj, dv.Mzh,strv,dv.Scjg);
             oraComm.ExecuteNonQuery();
+
+                dv.Id = ID;
+                historyData = true;
+
         }
 
         private void edtsfzh_Leave(object sender, EventArgs e)
@@ -648,7 +763,7 @@ namespace LTFYYJXT
         {
             dt.Rows.Clear();
             oraComm.CommandText = "select * from view_筛查信息_1 where 门诊号=" + textEdit1.Text;
-            oraComm.CommandText = "select * from view_筛查信息_1";
+           // oraComm.CommandText = "select * from view_筛查信息_1";
 
             oraDA.Fill(dt);
             if (dt.Rows.Count == 0)
@@ -666,6 +781,27 @@ namespace LTFYYJXT
                     edtName.Enabled = false;
 
                 }
+            }
+        }
+
+        private void edtyz_Enter(object sender, EventArgs e)
+        {
+           
+            //      x.SelectAll();
+
+        }
+
+        private void Form1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F4)
+            {
+                textEdit1.Text = "";
+                textEdit1.Focus(); //执行单击button1的动作      
             }
         }
     }

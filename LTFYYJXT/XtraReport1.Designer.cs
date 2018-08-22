@@ -43,7 +43,6 @@
             this.edtlxdh = new DevExpress.XtraReports.UI.XRLabel();
             this.edtsfzh = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel7 = new DevExpress.XtraReports.UI.XRLabel();
-            this.edtyz = new DevExpress.XtraReports.UI.XRLabel();
             this.edtnl = new DevExpress.XtraReports.UI.XRLabel();
             this.edtcsrq = new DevExpress.XtraReports.UI.XRLabel();
             this.edtxm = new DevExpress.XtraReports.UI.XRLabel();
@@ -52,6 +51,8 @@
             this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel5 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Detail
@@ -71,11 +72,11 @@
             this.edtlxdh,
             this.edtsfzh,
             this.xrLabel7,
-            this.edtyz,
             this.edtnl,
             this.edtcsrq,
             this.edtxm,
-            this.xrLabel2});
+            this.xrLabel2,
+            this.xrLabel3});
             this.Detail.HeightF = 773.3334F;
             this.Detail.Name = "Detail";
             this.Detail.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
@@ -221,20 +222,10 @@
             this.xrLabel7.StylePriority.UseFont = false;
             this.xrLabel7.Text = "证件号码：                     联系电话：  ";
             // 
-            // edtyz
-            // 
-            this.edtyz.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.edtyz.LocationFloat = new DevExpress.Utils.PointFloat(568.8333F, 10.00001F);
-            this.edtyz.Name = "edtyz";
-            this.edtyz.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.edtyz.SizeF = new System.Drawing.SizeF(26.04169F, 23F);
-            this.edtyz.StylePriority.UseFont = false;
-            this.edtyz.Text = "[Yz]";
-            // 
             // edtnl
             // 
             this.edtnl.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.edtnl.LocationFloat = new DevExpress.Utils.PointFloat(457.375F, 10.00001F);
+            this.edtnl.LocationFloat = new DevExpress.Utils.PointFloat(539.5833F, 10.00001F);
             this.edtnl.Name = "edtnl";
             this.edtnl.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.edtnl.SizeF = new System.Drawing.SizeF(26.04169F, 23F);
@@ -244,7 +235,7 @@
             // edtcsrq
             // 
             this.edtcsrq.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.edtcsrq.LocationFloat = new DevExpress.Utils.PointFloat(271.875F, 10.00001F);
+            this.edtcsrq.LocationFloat = new DevExpress.Utils.PointFloat(292.875F, 10.00001F);
             this.edtcsrq.Name = "edtcsrq";
             this.edtcsrq.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.edtcsrq.SizeF = new System.Drawing.SizeF(155.2083F, 23F);
@@ -269,11 +260,12 @@
             this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel2.SizeF = new System.Drawing.SizeF(629.9999F, 23F);
             this.xrLabel2.StylePriority.UseFont = false;
-            this.xrLabel2.Text = "姓名：          出生日期：             年龄：   岁 孕周：  周";
+            this.xrLabel2.Text = "姓名：              出生日期：                  年龄：   岁 ";
             // 
             // TopMargin
             // 
             this.TopMargin.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabel5,
             this.xrLabel1});
             this.TopMargin.HeightF = 100F;
             this.TopMargin.Name = "TopMargin";
@@ -296,6 +288,26 @@
             this.BottomMargin.Name = "BottomMargin";
             this.BottomMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.BottomMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // xrLabel3
+            // 
+            this.xrLabel3.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(192.7082F, 84.33333F);
+            this.xrLabel3.Name = "xrLabel3";
+            this.xrLabel3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel3.SizeF = new System.Drawing.SizeF(234.375F, 23F);
+            this.xrLabel3.StylePriority.UseFont = false;
+            this.xrLabel3.Text = "孕：[Yz]周[Yzt]天";
+            // 
+            // xrLabel5
+            // 
+            this.xrLabel5.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel5.LocationFloat = new DevExpress.Utils.PointFloat(457.375F, 77F);
+            this.xrLabel5.Name = "xrLabel5";
+            this.xrLabel5.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel5.SizeF = new System.Drawing.SizeF(179.1667F, 23F);
+            this.xrLabel5.StylePriority.UseFont = false;
+            this.xrLabel5.Text = "门诊号：[Mzh]";
             // 
             // XtraReport1
             // 
@@ -329,10 +341,11 @@
         private DevExpress.XtraReports.UI.XRLabel edtlxdh;
         private DevExpress.XtraReports.UI.XRLabel edtsfzh;
         private DevExpress.XtraReports.UI.XRLabel xrLabel7;
-        private DevExpress.XtraReports.UI.XRLabel edtyz;
         private DevExpress.XtraReports.UI.XRLabel edtnl;
         private DevExpress.XtraReports.UI.XRLabel edtcsrq;
         private DevExpress.XtraReports.UI.XRLabel edtxm;
         private DevExpress.XtraReports.UI.XRLabel xrLabel2;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel3;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel5;
     }
 }
