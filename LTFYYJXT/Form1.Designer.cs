@@ -95,6 +95,7 @@
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.edtyzt = new DevExpress.XtraEditors.TextEdit();
+            this.lblYS = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.edtcbzd.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.edtpgsj.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.edtpgsj.Properties)).BeginInit();
@@ -267,7 +268,7 @@
             this.button5.Location = new System.Drawing.Point(646, 7);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(100, 29);
-            this.button5.TabIndex = 19;
+            this.button5.TabIndex = 23;
             this.button5.Text = "打印【&P】";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
@@ -277,7 +278,7 @@
             this.button4.Location = new System.Drawing.Point(839, 7);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(112, 29);
-            this.button4.TabIndex = 18;
+            this.button4.TabIndex = 24;
             this.button4.Text = "退  出";
             this.button4.UseVisualStyleBackColor = true;
             // 
@@ -286,7 +287,7 @@
             this.button1.Location = new System.Drawing.Point(495, 7);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(141, 29);
-            this.button1.TabIndex = 18;
+            this.button1.TabIndex = 22;
             this.button1.Text = "保存并新建【&S】";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -296,7 +297,7 @@
             this.button6.Location = new System.Drawing.Point(340, 7);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(117, 29);
-            this.button6.TabIndex = 14;
+            this.button6.TabIndex = 21;
             this.button6.Text = "查询【&Q】";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
@@ -306,7 +307,7 @@
             this.button3.Location = new System.Drawing.Point(234, 7);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(107, 29);
-            this.button3.TabIndex = 14;
+            this.button3.TabIndex = 20;
             this.button3.Text = "新 建【&N】";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click_1);
@@ -953,12 +954,22 @@
             this.edtyzt.TabIndex = 4;
             this.edtyzt.Enter += new System.EventHandler(this.edtyz_Enter);
             // 
+            // lblYS
+            // 
+            this.lblYS.AutoSize = true;
+            this.lblYS.Location = new System.Drawing.Point(98, 304);
+            this.lblYS.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblYS.Name = "lblYS";
+            this.lblYS.Size = new System.Drawing.Size(0, 16);
+            this.lblYS.TabIndex = 106;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1436, 812);
+            this.Controls.Add(this.lblYS);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.edtcsrq);
             this.Controls.Add(this.edtbgrq);
@@ -1094,6 +1105,7 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.CheckBox ckhShowItem;
         private DevExpress.XtraEditors.TextEdit edtyzt;
+        private System.Windows.Forms.Label lblYS;
     }
 }
 

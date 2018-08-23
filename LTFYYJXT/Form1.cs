@@ -111,7 +111,7 @@ namespace LTFYYJXT
             selectLst = new List<CheckBox>();
             CheckBoxList = new List<CheckBox>();
 
-           // var con = string.Format("Data Source={0};User ID={1};Password={2}", "HIS", "zlhis", "HIS");
+          //  var con = string.Format("Data Source={0};User ID={1};Password={2}", "HIS", "zlhis", "HIS");
             var con = string.Format("Data Source={0};User ID={1};Password={2}", "ORA155", "us", "US");
             oraconn = new OracleConnection(con);
             oraconn.Open();
@@ -166,7 +166,7 @@ namespace LTFYYJXT
         {
             if (sender != null)
             {
-
+                zs = false;
                 string title="";
                 string context;
 
@@ -211,6 +211,7 @@ namespace LTFYYJXT
                     else
                         zs = true;
                 }
+              
 
  /*              foreach (var var in CheckBoxList)
                 {
@@ -236,13 +237,37 @@ namespace LTFYYJXT
                         break;
                 }
                 currentLevel = j;
+                if (selectLst.Count == 0)
+                    currentLevel = 0;
             }
             else
             {
 
 
             }
-
+            switch (currentLevel)
+            {
+                case 0:
+                    lblYS.Text = "";
+                    break;
+                case 1:
+                    lblYS.Text = "黄色";
+                    break;
+                case 2:
+                    lblYS.Text = "橙色";
+                    break;
+                case 3:
+                    lblYS.Text = "红色";
+                    break;
+                case 4:
+                    lblYS.Text = "紫色";
+                    break;
+            }
+            if (zs)
+            {
+                lblYS.Text = lblYS.Text + ",紫色";
+            }
+  
 
         }
 
@@ -519,25 +544,26 @@ namespace LTFYYJXT
             dv.Zs = zs;
             dv.Scjg = label8.Text;
             dv.Yzt = edtyzt.Text;
-            switch (currentLevel)
-            {
-                case 1:
-                    dv.Pgfj = "黄色";
-                    break;
-                case 2:
-                    dv.Pgfj = "橙色";
-                    break;
-                case 3:
-                    dv.Pgfj = "红色";
-                    break;
-                case 4:
-                    dv.Pgfj = "紫色";
-                    break;
-            }
-            if (dv.Zs)
-            {
-                dv.Pgfj = dv.Pgfj + ",紫色";
-            }
+            dv.Pgfj = lblYS.Text;
+//            switch (currentLevel)
+//            {
+//                case 1:
+//                    dv.Pgfj = "黄色";
+//                    break;
+//                case 2:
+//                    dv.Pgfj = "橙色";
+//                    break;
+//                case 3:
+//                    dv.Pgfj = "红色";
+//                    break;
+//                case 4:
+//                    dv.Pgfj = "紫色";
+//                    break;
+//            }
+//            if (dv.Zs)
+//            {
+//                dv.Pgfj = dv.Pgfj + ",紫色";
+//            }
 
             dvl.Add(dv);
         }
@@ -742,7 +768,7 @@ namespace LTFYYJXT
             }
             string sex;
             edtcsrq.Text = GetBirthdayAndSex(edtsfzh.Text, out sex);
-            edtage.Text = (DateTime.Now.Year - edtcsrq.DateTime.Year).ToString() ;
+            edtage.Text = (DateTime.Now.Year - edtcsrq.DateTime.Year).ToString() +"岁" ;
         }
 
         private void textEdit1_KeyPress(object sender, KeyPressEventArgs e)
