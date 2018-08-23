@@ -544,11 +544,6 @@ namespace LTFYYJXT
 
         private void SaveData()
         {
-            if (edtyz.Text.IsEmpty())
-            {
-                MessageBox.Show("孕周不能为空！");
-                edtyz.Focus();
-            }
             UpdateData();
             SaveDataToDB(dv);
             historyData = true;
@@ -556,6 +551,7 @@ namespace LTFYYJXT
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (!prepareSaveInfo()) return;
             SaveData();
             edtName.Enabled = true;
             clearControlText();
@@ -587,8 +583,20 @@ namespace LTFYYJXT
             zs = false;
         }
 
+        private bool prepareSaveInfo()
+        {
+            if (edtyz.Text.IsEmpty())
+            {
+                MessageBox.Show("孕周不能为空！");
+                edtyz.Focus();
+                return false;
+            }
+            return true;
+        }
+
         private void button5_Click(object sender, EventArgs e)
         {
+            if (! prepareSaveInfo()) return;
             UpdateData();
             SaveData();
             var xx = new XtraReport1();
@@ -803,6 +811,8 @@ namespace LTFYYJXT
                 textEdit1.Text = "";
                 textEdit1.Focus(); //执行单击button1的动作      
             }
+            if (e.Control && (e.KeyCode == Keys.P))
+                button5_Click(this,null);
         }
     }
 }
