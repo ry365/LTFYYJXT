@@ -79,7 +79,6 @@
             this.p12 = new System.Windows.Forms.Panel();
             this.p13 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.ckhShowItem = new System.Windows.Forms.CheckBox();
             this.radioButton14 = new System.Windows.Forms.RadioButton();
             this.radioButton13 = new System.Windows.Forms.RadioButton();
             this.radioButton12 = new System.Windows.Forms.RadioButton();
@@ -657,7 +656,6 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.ckhShowItem);
             this.panel3.Controls.Add(this.radioButton14);
             this.panel3.Controls.Add(this.radioButton13);
             this.panel3.Controls.Add(this.radioButton12);
@@ -680,18 +678,6 @@
             this.panel3.Padding = new System.Windows.Forms.Padding(4);
             this.panel3.Size = new System.Drawing.Size(260, 767);
             this.panel3.TabIndex = 105;
-            // 
-            // ckhShowItem
-            // 
-            this.ckhShowItem.AutoSize = true;
-            this.ckhShowItem.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ckhShowItem.Location = new System.Drawing.Point(4, 410);
-            this.ckhShowItem.Name = "ckhShowItem";
-            this.ckhShowItem.Size = new System.Drawing.Size(252, 23);
-            this.ckhShowItem.TabIndex = 115;
-            this.ckhShowItem.Text = "显示筛查信息";
-            this.ckhShowItem.UseVisualStyleBackColor = true;
-            this.ckhShowItem.Visible = false;
             // 
             // radioButton14
             // 
@@ -1103,7 +1089,6 @@
         private System.Windows.Forms.Panel p13;
         private System.Windows.Forms.Panel p14;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.CheckBox ckhShowItem;
         private DevExpress.XtraEditors.TextEdit edtyzt;
         private System.Windows.Forms.Label lblYS;
     }

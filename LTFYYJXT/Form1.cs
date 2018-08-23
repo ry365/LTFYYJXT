@@ -111,8 +111,8 @@ namespace LTFYYJXT
             selectLst = new List<CheckBox>();
             CheckBoxList = new List<CheckBox>();
 
-          //  var con = string.Format("Data Source={0};User ID={1};Password={2}", "HIS", "zlhis", "HIS");
-            var con = string.Format("Data Source={0};User ID={1};Password={2}", "ORA155", "us", "US");
+              var con = string.Format("Data Source={0};User ID={1};Password={2}", "HIS", "zlhis", "HIS");
+           // var con = string.Format("Data Source={0};User ID={1};Password={2}", "ORA155", "us", "US");
             oraconn = new OracleConnection(con);
             oraconn.Open();
 
@@ -642,44 +642,44 @@ namespace LTFYYJXT
 
             dt.Clear();
 
-//            oraComm.CommandText = "select * from view_筛查信息_2 where 门诊号=" + textEdit1.Text;
-//            oraDA.Fill(dt);
-//            if (dt.Rows.Count == 0)
-//            {
-//                MessageBox.Show("未找到门诊号对应的信息，请重新输入后再试！");
-//                textEdit1.SelectAll();
-//                textEdit1.Focus();
-//            }
-//            else
-//            {
-//                edtyz.Focus();
-//                historyData = false;
-//                UpdateData(dt.Rows[0]);
-//            }
-              oraComm.CommandText = "select * from view_筛查信息_1 where 门诊号=" + textEdit1.Text  ;
-              oraDA.Fill(dt);
-             if (dt.Rows.Count == 0)
-              {
-                  oraComm.CommandText = "select * from view_筛查信息_2 where 门诊号=" + textEdit1.Text;
-                  oraDA.Fill(dt);
-                  if (dt.Rows.Count == 0)
-                  {
-                      MessageBox.Show("未找到门诊号对应的信息，请重新输入后再试！");
-                      textEdit1.SelectAll();
-                      textEdit1.Focus();
-                      return;
-                  }
-                  else
-                  {
-                      UpdateData(dt.Rows[0]);
-                  }
-              }
-              else
-              {
-                  historyData = false;
-                  UpdateDataNewHistory(dt.Rows[0]);
-              }
-            edtyz.Focus();
+            oraComm.CommandText = "select * from view_筛查信息_2 where 门诊号=" + textEdit1.Text;
+            oraDA.Fill(dt);
+            if (dt.Rows.Count == 0)
+            {
+                MessageBox.Show("未找到门诊号对应的信息，请重新输入后再试！");
+                textEdit1.SelectAll();
+                textEdit1.Focus();
+            }
+            else
+            {
+                edtyz.Focus();
+                historyData = false;
+                UpdateData(dt.Rows[0]);
+            }
+//              oraComm.CommandText = "select * from view_筛查信息_1 where 门诊号=" + textEdit1.Text  ;
+//              oraDA.Fill(dt);
+//             if (dt.Rows.Count == 0)
+//              {
+//                  oraComm.CommandText = "select * from view_筛查信息_2 where 门诊号=" + textEdit1.Text;
+//                  oraDA.Fill(dt);
+//                  if (dt.Rows.Count == 0)
+//                  {
+//                      MessageBox.Show("未找到门诊号对应的信息，请重新输入后再试！");
+//                      textEdit1.SelectAll();
+//                      textEdit1.Focus();
+//                      return;
+//                  }
+//                  else
+//                  {
+//                      UpdateData(dt.Rows[0]);
+//                  }
+//              }
+//              else
+//              {
+//                  historyData = false;
+//                  UpdateDataNewHistory(dt.Rows[0]);
+//              }
+//            edtyz.Focus();
 
 
         }
