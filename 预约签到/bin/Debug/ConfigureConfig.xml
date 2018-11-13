@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config ProduceName="DarkKevin.com.cn" Ver="v4.0">
+  <title>医学系统</title>
+  <设置>
+    <号码类型>2</号码类型>
+  </设置>
+</config>

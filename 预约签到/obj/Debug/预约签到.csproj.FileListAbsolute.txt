@@ -1,0 +1,13 @@
+E:\Source\2019\龙潭妇幼保健院\预约签到\预约签到\bin\Debug\预约签到.exe.config
+E:\Source\2019\龙潭妇幼保健院\预约签到\预约签到\bin\Debug\预约签到.exe
+E:\Source\2019\龙潭妇幼保健院\预约签到\预约签到\bin\Debug\预约签到.pdb
+E:\Source\2019\龙潭妇幼保健院\预约签到\预约签到\obj\Debug\预约签到.csprojResolveAssemblyReference.cache
+E:\Source\2019\龙潭妇幼保健院\预约签到\预约签到\obj\Debug\预约签到.Form1.resources
+E:\Source\2019\龙潭妇幼保健院\预约签到\预约签到\obj\Debug\预约签到.Properties.Resources.resources
+E:\Source\2019\龙潭妇幼保健院\预约签到\预约签到\obj\Debug\预约签到.csproj.GenerateResource.Cache
+E:\Source\2019\龙潭妇幼保健院\预约签到\预约签到\obj\Debug\预约签到.exe
+E:\Source\2019\龙潭妇幼保健院\预约签到\预约签到\obj\Debug\预约签到.pdb
+E:\Source\2019\龙潭妇幼保健院\预约签到\预约签到\bin\Debug\RY.Defined.V6.1.dll
+E:\Source\2019\龙潭妇幼保健院\预约签到\预约签到\bin\Debug\RY.Function.V6.1.dll
+E:\Source\2019\龙潭妇幼保健院\预约签到\预约签到\bin\Debug\RY.Defined.V6.1.pdb
+E:\Source\2019\龙潭妇幼保健院\预约签到\预约签到\bin\Debug\RY.Function.V6.1.pdb

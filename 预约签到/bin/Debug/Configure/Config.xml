@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<config ProduceName="DarkKevin.com.cn" Ver="v4.0">
+  <title>医学系统</title>
+  <ConnectDB>
+    <DBHostIP>172.16.115.155</DBHostIP>
+    <DBUserName>us</DBUserName>
+    <DBPasswd>US</DBPasswd>
+    <DBPort>1521</DBPort>
+    <DBName>oracle</DBName>
+  </ConnectDB>
+  <Load>
+    <号码类型 />
+  </Load>
+  <设置>
+    <处理方式>执行预约</处理方式>
+    <其他条件>
+    </其他条件>
+    <号码类型>2</号码类型>
+    <默认操作>1</默认操作>
+    <存储过程名>pro_根据相关的ID执行</存储过程名>
+    <蜂鸣提示>1</蜂鸣提示>
+  </设置>
+</config>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!--DataTable: test-->
+<DataTable TableName="test" CountOfRows="2" CountOfColumns="10">
+  <ClomunName Column0="ID" Column1="NAME" Column2="MAXNO" Column3="CODE" Column4="AUTOCHANGESTATUS" Column5="APPLY" Column6="UNIFORMNO" Column7="DIRECTDIAG" Column8="ORDERINDEX" Column9="MAXNOTITLE" />
+  <Row0 Column0="1" Column1="门诊号" Column2="10000" Column3="JKJC" Column4="" Column5="1" Column6="1" Column7="" Column8="1" Column9="" />
+  <Row1 Column0="2" Column1="住院号" Column2="10000" Column3="TJ" Column4="" Column5="1" Column6="1" Column7="" Column8="0" Column9="" />
+</DataTable>
