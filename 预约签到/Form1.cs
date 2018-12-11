@@ -72,7 +72,7 @@ namespace 预约签到
             ExecuteProgram(methodProgram,dict);
 
             if (_beep != "0")
-                Ry.Function.FunctionCommon.MessageBeep(5555);
+                Ry.Function.FunctionCommon.MessageBeep(55);
             textBox1.SelectAll();
             textBox1.Focus();
         }
@@ -90,6 +90,10 @@ namespace 预约签到
                 "ConnectDB/DBPort", "1521"); 
             ServerName = XMLFileOperate.CXmlFile.GetStringFromXmlFile(configFile,
                 "ConnectDB/DBName", "Oracle"); 
+            ConnectOracle();
+
+            this.Text = XMLFileOperate.CXmlFile.GetStringFromXmlFile(configFile,
+                "设置/软件名称", "常用程序设置");
             ConnectOracle();
 
             methodName = XMLFileOperate.CXmlFile.GetStringFromXmlFile(configFile,
